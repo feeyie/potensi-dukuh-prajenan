@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data UMKM Dukuh Prajenan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,450;9..144,560;9..144,650&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <style>
+        /* ===== RESET & VARIABEL ===== */
+        :root {
+            --paper: #F7F3E7;
+            --paper-deep: #EFE7D2;
+            --white: #FFFFFF;
+            --ink: #20291D;
+            --ink-soft: #5C6858;
+            --padi: #5B7C3B;
+            --padi-deep: #1F3327;
+            --forest: #16261D;
+            --forest-soft: #233A2B;
+            --soil: #AD5E2C;
+            --tirta: #3B717C;
+            --gabah: #D9A441;
+            --gabah-soft: #F0D9A0;
+            --line: rgba(32, 41, 29, 0.14);
+            --radius: 22px;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        h1, h2, h3, .display {
+            font-family: 'Fraunces', serif;
+            font-weight: 560;
+            letter-spacing: -0.01em;
+            margin: 0;
+        }
+        .mono {
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .wrap {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+        @media (max-width: 640px) {
+            .wrap { padding: 0 20px; }
+        }
+
+        /* ===== NAV ===== */
+        .nav-outer {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            padding: 18px 20px 0;
+        }
+        header.nav {
+            max-width: 1120px;
+            margin: 0 auto;
+            background: var(--forest);
+            border-radius: 999px;
+            box-shadow: 0 12px 30px -12px rgba(22, 38, 29, 0.45);
+        }
+        .nav-inner {
+            padding: 12px 12px 12px 26px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        @media (max-width: 640px) {
+            .nav-inner { padding: 10px 10px 10px 18px; }
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .brand .leaf {
+            color: var(--gabah);
+            font-size: 1.1rem;
+        }
+        .brand .mark {
+            font-family: 'Fraunces', serif;
+            font-weight: 650;
+            font-size: 1.15rem;
+            color: #FBF7E9;
+        }
+        .nav-links {
+            display: flex;
+            gap: 26px;
+            font-size: 0.85rem;
+        }
+        .nav-links a {
+            color: #C9D4C4;
+            font-weight: 400;
+            padding-bottom: 3px;
+            border-bottom: 1px solid transparent;
+            transition: color .2s;
+        }
+        .nav-links a:hover {
+            color: var(--gabah);
+        }
+        @media (max-width: 900px) {
+            .nav-links { display: none; }
+        }
+        .nav-cta {
+            background: var(--gabah);
+            color: var(--forest);
+            font-weight: 500;
+            padding: 11px 24px;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            transition: transform .2s;
+        }
+        .nav-cta:hover {
+            transform: translateY(-1px);
+        }
+
+        /* ===== SECTION ===== */
+        section {
+            padding: 64px 0;
+        }
+        .section-head {
+            max-width: 640px;
+            margin-bottom: 52px;
+        }
+        .section-head .tag {
+            font-size: 0.78rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--soil);
+            margin-bottom: 14px;
+            display: block;
+        }
+        .section-head h2 {
+            font-size: clamp(1.9rem, 4vw, 2.7rem);
+            color: var(--padi-deep);
+        }
+        .section-head p {
+            color: var(--ink-soft);
+            margin-top: 14px;
+            font-size: 1.02rem;
+            font-weight: 300;
+        }
+
+        /* ===== STAT ROW ===== */
+        .stat-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+            background: var(--line);
+            border: 1px solid var(--line);
+            margin-bottom: 48px;
+        }
+        @media (max-width: 780px) {
+            .stat-row { grid-template-columns: repeat(2, 1fr); }
+        }
+        .stat-cell {
+            background: var(--paper);
+            padding: 30px 24px;
+            border-radius: 14px;
+        }
+        .stat-cell .v {
+            font-family: 'Fraunces', serif;
+            font-weight: 560;
+            font-size: 2.1rem;
+            color: var(--padi-deep);
+        }
+        .stat-cell .u {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+            color: var(--ink-soft);
+            margin-top: 6px;
+        }
+
+        /* ===== FILTER ===== */
+        .filter-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 36px;
+        }
+        .filter-btn {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 400;
+            background: transparent;
+            border: 1px solid var(--line);
+            color: var(--ink-soft);
+            padding: 9px 20px;
+            border-radius: 999px;
+            cursor: pointer;
+            transition: all .2s;
+        }
+        .filter-btn:hover {
+            border-color: var(--padi-deep);
+            color: var(--padi-deep);
+        }
+        .filter-btn.active {
+            background: var(--padi-deep);
+            border-color: var(--padi-deep);
+            color: #FBF7E9;
+        }
+
+        /* ===== UMKM GRID ===== */
+        .umkm-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-bottom: 24px;
+        }
+        @media (max-width: 900px) {
+            .umkm-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 520px) {
+            .umkm-grid { grid-template-columns: 1fr; }
+        }
+        .umkm-card {
+            background: #fff;
+            border: 1px solid var(--line);
+            padding: 26px 22px;
+            border-radius: var(--radius);
+            transition: background .2s, border-color .2s, transform .2s;
+            text-align: center;
+        }
+        .umkm-card:hover {
+            background: var(--paper-deep);
+            border-color: var(--gabah);
+            transform: translateY(-3px);
+        }
+        .umkm-card .icon-box {
+            font-size: 2.6rem;
+            color: var(--gabah);
+            margin-bottom: 12px;
+            display: block;
+            line-height: 1.2;
+        }
+        .umkm-card h3 {
+            font-size: 1.05rem;
+            color: var(--padi-deep);
+            margin-bottom: 8px;
+        }
+        .umkm-card p {
+            font-size: 0.86rem;
+            color: var(--ink-soft);
+            margin: 0;
+            line-height: 1.55;
+        }
+        .umkm-card .owner {
+            font-weight: 400;
+            color: var(--ink);
+            margin-bottom: 4px;
+        }
+        .umkm-card .tk {
+            display: inline-block;
+            margin-top: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.62rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--soil);
+            border: 1px solid rgba(173, 94, 44, 0.3);
+            padding: 3px 9px;
+            border-radius: 999px;
+        }
+        .umkm-card .rt-badge {
+            display: inline-block;
+            background: var(--tirta);
+            color: #fff;
+            font-size: 0.6rem;
+            padding: 2px 10px;
+            border-radius: 999px;
+            margin-top: 6px;
+            margin-left: 6px;
+        }
+
+        /* ===== TOP SEKTOR ===== */
+        .top5-box {
+            background: rgba(217, 164, 65, 0.1);
+            border: 1px solid rgba(217, 164, 65, 0.3);
+            border-radius: var(--radius);
+            padding: 26px 28px;
+            margin-bottom: 16px;
+        }
+        .top5-list {
+            margin-top: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        .top5-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 12px 6px;
+            border-bottom: 1px dashed var(--line);
+        }
+        .top5-item:last-child {
+            border-bottom: none;
+        }
+        .top5-item .rank {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: var(--gabah);
+            color: var(--forest);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.78rem;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+        .top5-item .name {
+            flex: 1;
+            font-size: 0.92rem;
+        }
+        .top5-item .count {
+            color: var(--soil);
+            font-weight: 600;
+            font-size: 0.92rem;
+            white-space: nowrap;
+        }
+
+        .note {
+            background: rgba(173, 94, 44, 0.08);
+            border: 1px dashed var(--soil);
+            padding: 14px 18px;
+            font-size: 0.82rem;
+            color: var(--ink-soft);
+            margin-top: 14px;
+            border-radius: var(--radius);
+        }
+
+        .btn-back {
+            display: inline-block;
+            background: var(--padi-deep);
+            color: #FBF7E9;
+            font-weight: 500;
+            font-size: 0.88rem;
+            padding: 14px 32px;
+            border-radius: 999px;
+            transition: transform .2s;
+            border: none;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            margin-top: 24px;
+        }
+        .btn-back:hover {
+            transform: translateY(-2px);
+        }
+
+        /* ===== FOOTER (sama dengan index) ===== */
+        footer.bg-dark-green {
+            background: var(--padi-deep);
+            color: #F4EFDD;
+            border-top: none;
+            padding: 70px 0 40px;
+        }
+        footer.bg-dark-green h4 {
+            color: var(--gabah);
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.66rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 14px;
+        }
+        footer.bg-dark-green p,
+        footer.bg-dark-green li,
+        footer.bg-dark-green .foot-bottom {
+            color: #C6D2A9;
+            font-size: 0.9rem;
+        }
+        footer.bg-dark-green .foot-bottom {
+            margin-top: 56px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.66rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        footer.bg-dark-green a {
+            color: #F4EFDD;
+        }
+        footer.bg-dark-green a:hover {
+            color: var(--gabah);
+        }
+        footer.bg-dark-green ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .foot-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr 1fr;
+            gap: 40px;
+        }
+        @media (max-width: 700px) {
+            .foot-grid { grid-template-columns: 1fr; gap: 32px; }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(14px);
+            transition: opacity .7s ease, transform .7s ease;
+        }
+        .fade-in.in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== NAV ===== -->
+    <div class="nav-outer">
+        <header class="nav">
+            <div class="nav-inner">
+                <div class="brand">
+                    <span class="leaf">🌾</span>
+                    <span class="mark">Prajenan</span>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html#sejarah">Sejarah</a>
+                    <a href="index.html#potensi">Potensi</a>
+                    <a href="index.html#kegiatan">Kegiatan</a>
+                    <a href="index.html#umkm">UMKM</a>
+                    <a href="index.html#demografi">Demografi</a>
+                </div>
+                <a href="index.html" class="nav-cta">← Kembali ke Beranda</a>
+            </div>
+        </header>
+    </div>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <section style="padding-top:40px;">
+        <div class="wrap">
+            <div class="section-head">
+                <span class="tag">Ekonomi Warga · Data 2025</span>
+                <h2>Seluruh Data UMKM Dukuh Prajenan</h2>
+                <p>Berikut adalah daftar lengkap 38 unit usaha mikro yang tercatat aktif di wilayah Prajenan.</p>
+            </div>
+
+            <!-- Statistik -->
+            <div class="stat-row">
+                <div class="stat-cell"><div class="v">38</div><div class="u">UMKM Aktif (2025)</div></div>
+                <div class="stat-cell"><div class="v">56</div><div class="u">Tenaga Kerja Terlibat</div></div>
+                <div class="stat-cell"><div class="v">Rp429,06 jt</div><div class="u">Total Omset / Tahun</div></div>
+                <div class="stat-cell"><div class="v">Rp330,8 jt</div><div class="u">Total Modal Usaha</div></div>
+            </div>
+
+            <!-- Top 5 Sektor Terbanyak -->
+            <div class="top5-box">
+                <span class="mono" style="color:var(--soil);font-size:0.68rem;">🏆 Sektor Usaha Terbanyak</span>
+                <div class="top5-list" id="topSektorList"></div>
+            </div>
+
+            <!-- Filter -->
+            <div class="filter-row" id="umkm-filter">
+                <button class="filter-btn active" data-rt="semua">Semua (29)</button>
+                <button class="filter-btn" data-rt="RT 05">RT 05 (15)</button>
+                <button class="filter-btn" data-rt="RT 06">RT 06 (14)</button>
+            </div>
+
+            <!-- Grid -->
+            <div class="umkm-grid" id="umkm-dynamic-grid"></div>
+
+            <div class="note">
+                <span class="mono" style="color:var(--soil);font-size:0.7rem;">Catatan</span>
+                <p style="margin-top:2px;">Data diolah dari pendataan UMKM Kecamatan Gantiwarno tahun 2025.</p>
+            </div>
+
+            <div style="text-align:center;">
+                <a href="index.html" class="btn-back">← Kembali ke Beranda</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER (sama dengan index) ===== -->
+    <footer class="bg-dark-green">
+        <div class="wrap">
+            <div class="foot-grid">
+                <div>
+                    <h4>Dukuh Prajenan</h4>
+                    <p>Padukuhan agraris di Kabupaten Klaten, Jawa Tengah. Situs profil ini disusun untuk memperkenalkan sejarah, lokasi, dan potensi wilayah kepada masyarakat luas.</p>
+                </div>
+                <div>
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="index.html#sejarah">Sejarah</a></li>
+                        <li><a href="index.html#lokasi">Lokasi</a></li>
+                        <li><a href="index.html#potensi">Potensi</a></li>
+                        <li><a href="index.html#kegiatan">Kegiatan</a></li>
+                        <li><a href="umkm.html">UMKM Detail</a></li>
+                        <li><a href="demografi.html">Demografi Detail</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Kontak</h4>
+                    <ul>
+                        <li>Kepala Desa: Slamet Sutrisno</li>
+                        <li>Alamat: Jl. Cetok, Prajenan, Baturan,<br>Kec. Gantiwarno, Kab. Klaten,<br>Jawa Tengah 57455</li>
+                        <li>Telepon/WA: [Nomor Kontak]</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="foot-bottom">
+                <span>© KKN-BN 84.307 UPNVYK</span>
+                <span>Data UMKM 2025</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script src="data-umkm.js"></script>
+    <script>
+        // ============================================================
+        // FUNGSI IKON FONT AWESOME
+        // ============================================================
+        function getIconByJenis(jenis) {
+            const lower = jenis.toLowerCase();
+            if (lower.includes('ayam')) return 'fa-drumstick-bite';
+            if (lower.includes('soto') || lower.includes('gado') || lower.includes('pecel') || lower.includes('lotek')) return 'fa-bowl-food';
+            if (lower.includes('warung') || lower.includes('kedai') || lower.includes('nasi')) return 'fa-utensils';
+            if (lower.includes('mie') || lower.includes('bakso')) return 'fa-utensils';
+            if (lower.includes('angkringan')) return 'fa-mug-saucer';
+            if (lower.includes('sate')) return 'fa-utensils';
+            if (lower.includes('tahu')) return 'fa-seedling';
+            if (lower.includes('cireng') || lower.includes('siomay') || lower.includes('cilok')) return 'fa-bowl-food';
+            if (lower.includes('dawet') || lower.includes('es') || lower.includes('degan')) return 'fa-ice-cream';
+            if (lower.includes('jamu')) return 'fa-leaf';
+            if (lower.includes('krupuk') || lower.includes('rempeyek')) return 'fa-cookie';
+            if (lower.includes('telur asin')) return 'fa-egg';
+            if (lower.includes('catering') || lower.includes('makanan kecil') || lower.includes('lauk')) return 'fa-bowl-food';
+            if (lower.includes('dagang') || lower.includes('jual') || lower.includes('toko') ||
+                lower.includes('sembako') || lower.includes('kelontong') || lower.includes('pulsa')) return 'fa-store';
+            if (lower.includes('bengkel') || lower.includes('servis') || lower.includes('las') ||
+                lower.includes('reklame') || lower.includes('tambal ban')) return 'fa-wrench';
+            if (lower.includes('penjahit') || lower.includes('vermak') || lower.includes('jahit')) return 'fa-scissors';
+            if (lower.includes('laundry') || lower.includes('loundry')) return 'fa-shirt';
+            if (lower.includes('salon') || lower.includes('cuci motor') || lower.includes('cuci mobil')) return 'fa-car';
+            if (lower.includes('paket') || lower.includes('jasa')) return 'fa-box';
+            if (lower.includes('pemborong') || lower.includes('bangunan')) return 'fa-hard-hat';
+            if (lower.includes('pangkalan gas')) return 'fa-gas-pump';
+            if (lower.includes('ternak') || lower.includes('puyuh') || lower.includes('itik') ||
+                lower.includes('kambing') || lower.includes('lele') || lower.includes('burung')) return 'fa-cow';
+            if (lower.includes('penggilingan padi')) return 'fa-wheat-awn';
+            if (lower.includes('meubelair') || lower.includes('meubel')) return 'fa-chair';
+            if (lower.includes('batu nisan') || lower.includes('beton')) return 'fa-mountain';
+            if (lower.includes('depo pasir')) return 'fa-trowel';
+            if (lower.includes('pengepul') || lower.includes('rosokan') || lower.includes('barang bekas')) return 'fa-recycle';
+            return 'fa-store';
+        }
+
+        // ============================================================
+        // RENDER UMKM GRID
+        // ============================================================
+        function renderUmkmGrid(filterRt) {
+            const grid = document.getElementById('umkm-dynamic-grid');
+            if (!grid) return;
+            const items = umkmData.filter(d => filterRt === 'semua' || d.rt === filterRt);
+            if (items.length === 0) {
+                grid.innerHTML = `<p style="grid-column:1/-1; text-align:center; color:var(--ink-soft); padding:40px 0;">Tidak ada data untuk RT ini.</p>`;
+                return;
+            }
+            grid.innerHTML = items.map(d => {
+                const iconClass = getIconByJenis(d.jenis);
+                return `
+                    <div class="umkm-card">
+                        <span class="icon-box"><i class="fa-solid ${iconClass}"></i></span>
+                        <h3>${d.jenis}</h3>
+                        <p class="owner">${d.nama}</p>
+                        <span class="tk">${d.sektor}</span>
+                        <span class="rt-badge">${d.rt}</span>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // ============================================================
+        // TOP SEKTOR
+        // ============================================================
+        function renderTopSektor() {
+            const sektorCount = {};
+            umkmData.forEach(d => {
+                sektorCount[d.sektor] = (sektorCount[d.sektor] || 0) + 1;
+            });
+            const sorted = Object.entries(sektorCount).sort((a, b) => b[1] - a[1]).slice(0, 5);
+            const list = document.getElementById('topSektorList');
+            if (list) {
+                list.innerHTML = sorted.map(([sektor, count], idx) => `
+                    <div class="top5-item">
+                        <span class="rank">${idx + 1}</span>
+                        <span class="name">${sektor}</span>
+                        <span class="count">${count} UMKM</span>
+                    </div>
+                `).join('');
+            }
+        }
+
+        // ============================================================
+        // INISIALISASI
+        // ============================================================
+        renderUmkmGrid('semua');
+        renderTopSektor();
+
+        // ============================================================
+        // FILTER
+        // ============================================================
+        document.querySelectorAll('#umkm-filter .filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('#umkm-filter .filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                renderUmkmGrid(btn.dataset.rt);
+            });
+        });
+
+        // ============================================================
+        // FADE-IN
+        // ============================================================
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+        }, { threshold: 0, rootMargin: '0px 0px -10% 0px' });
+        document.querySelectorAll('section').forEach(s => {
+            s.classList.add('fade-in');
+            io.observe(s);
+        });
+    </script>
+</body>
+</html>
