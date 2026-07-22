@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KKN AD.84.307 – Dukuh Prajenan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,450;9..144,560;9..144,650&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    /* ===== RESET & VARIABEL ===== */
+    :root {
+      --paper: #F7F3E7;
+      --paper-deep: #EFE7D2;
+      --white: #FFFFFF;
+      --ink: #20291D;
+      --ink-soft: #5C6858;
+      --padi: #5B7C3B;
+      --padi-deep: #1F3327;
+      --forest: #16261D;
+      --forest-soft: #233A2B;
+      --soil: #AD5E2C;
+      --tirta: #3B717C;
+      --gabah: #D9A441;
+      --gabah-soft: #F0D9A0;
+      --line: rgba(32, 41, 29, 0.14);
+      --radius: 22px;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      padding-top: 85px;
+    }
+    @media (max-width: 640px) {
+      body {
+        padding-top: 75px;
+      }
+    }
+    h1, h2, h3, .display {
+      font-family: 'Fraunces', serif;
+      font-weight: 560;
+      letter-spacing: -0.01em;
+      margin: 0;
+    }
+    .mono {
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    img {
+      max-width: 100%;
+      display: block;
+    }
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+    @media (max-width: 640px) {
+      .wrap {
+        padding: 0 20px;
+      }
+    }
+
+    /* ===== BACKGROUND ===== */
+    .bg-paper { background: var(--paper); }
+    .bg-paper-deep { background: var(--paper-deep); }
+    .bg-white { background: var(--white); }
+    .bg-dark-green {
+      background: var(--padi-deep);
+      color: #F4EFDD;
+    }
+    .bg-dark-green .section-head .tag { color: var(--gabah); }
+    .bg-dark-green .section-head h2 { color: #FBF7E9; }
+    .bg-dark-green .section-head p { color: #CFDAB8; }
+
+    /* ===== NAV ===== */
+    .nav-outer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 9999;
+      padding: 4px 20px 0;
+      background: transparent;
+      pointer-events: none;
+    }
+    header.nav {
+      max-width: 1120px;
+      margin: 0 auto;
+      background: var(--forest);
+      border-radius: 999px;
+      box-shadow: 0 12px 30px -12px rgba(22, 38, 29, 0.45);
+      pointer-events: auto;
+    }
+    .nav-inner {
+      padding: 12px 12px 12px 26px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    @media (max-width: 640px) {
+      .nav-inner {
+        padding: 10px 10px 10px 18px;
+      }
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .brand .leaf {
+      color: var(--gabah);
+      font-size: 1.1rem;
+    }
+    .brand .mark {
+      font-family: 'Fraunces', serif;
+      font-weight: 650;
+      font-size: 1.15rem;
+      color: #FBF7E9;
+    }
+    nav.links {
+      display: flex;
+      gap: 12px;
+      font-size: 0.85rem;
+    }
+    nav.links a {
+      text-decoration: none;
+      color: #C9D4C4;
+      font-weight: 400;
+      padding-bottom: 3px;
+      border-bottom: 1px solid transparent;
+      transition: color .2s;
+    }
+    nav.links a:hover {
+      color: var(--gabah);
+    }
+    @media (max-width: 900px) {
+      nav.links {
+        display: none;
+      }
+    }
+    .nav-cta {
+      background: var(--gabah);
+      color: var(--forest);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 11px 12px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      white-space: nowrap;
+      transition: transform .2s;
+    }
+    .nav-cta:hover {
+      transform: translateY(-1px);
+    }
+
+    /* ===== HERO ===== */
+    .hero-wrap {
+      padding: 20px 20px 0;
+      margin-top: 0;
+    }
+    .hero {
+      position: relative;
+      max-width: 1120px;
+      margin: 0 auto;
+      border-radius: 32px;
+      overflow: hidden;
+      color: #F4EFDD;
+      min-height: 300px;
+    }
+    @media (max-width: 860px) {
+      .hero {
+        min-height: auto;
+        border-radius: 24px;
+      }
+    }
+    @media (max-width: 480px) {
+      .hero-wrap {
+        padding: 14px 14px 0;
+      }
+      .hero {
+        border-radius: 18px;
+      }
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(90deg, rgba(15, 25, 17, 0.82) 0%, rgba(15, 25, 17, 0.55) 45%, rgba(15, 25, 17, 0.15) 75%),
+                  linear-gradient(0deg, rgba(15, 25, 17, 0.5), transparent 45%);
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      padding: 50px 40px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 300px;
+    }
+    @media (max-width: 860px) {
+      .hero-inner {
+        padding: 40px 24px 30px;
+        min-height: auto;
+      }
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      line-height: 1.05;
+      color: #FBF7E9;
+    }
+    .hero h1 em {
+      font-style: italic;
+      font-weight: 300;
+      color: var(--gabah);
+    }
+    .hero p.lede {
+      max-width: 600px;
+      margin-top: 8px;
+      font-size: 1rem;
+      color: #DCE6C6;
+      font-weight: 300;
+    }
+
+    /* ===== SECTION ===== */
+    section {
+      padding: 80px 0;
+    }
+    @media (max-width: 640px) {
+      section {
+        padding: 56px 0;
+      }
+    }
+    .section-head {
+      max-width: 720px;
+      margin-bottom: 44px;
+    }
+    .section-head .tag {
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--soil);
+      margin-bottom: 14px;
+      display: block;
+    }
+    .section-head h2 {
+      font-size: clamp(1.9rem, 4vw, 2.6rem);
+      color: var(--padi-deep);
+    }
+    .section-head p {
+      color: var(--ink-soft);
+      margin-top: 14px;
+      font-size: 1.02rem;
+      font-weight: 300;
+    }
+
+    /* ===== CONTOUR ===== */
+    hr.contour-paper,
+    hr.contour-paper-deep,
+    hr.contour-dark-green {
+      border: none;
+      height: 14px;
+      margin: 0;
+      background-repeat: repeat-x;
+      background-position: top;
+      background-size: 30px 16px;
+    }
+    hr.contour-paper {
+      background-image: radial-gradient(circle at 50% -6px, transparent 9px, var(--paper) 10px);
+    }
+    hr.contour-paper-deep {
+      background-image: radial-gradient(circle at 50% -6px, transparent 9px, var(--paper-deep) 10px);
+    }
+    hr.contour-dark-green {
+      background-image: radial-gradient(circle at 50% -6px, transparent 9px, var(--padi-deep) 10px);
+    }
+
+    /* ===== ANGGOTA ===== */
+    .anggota-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 18px;
+    }
+    .anggota-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px 14px;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .anggota-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    }
+    .anggota-card .avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: var(--paper-deep);
+      margin: 0 auto 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: var(--ink-soft);
+      border: 2px solid var(--gabah);
+    }
+    .anggota-card .nama {
+      font-weight: 500;
+      font-size: 1rem;
+      color: var(--padi-deep);
+    }
+    .anggota-card .nim {
+      font-size: 0.75rem;
+      color: var(--ink-soft);
+    }
+    .anggota-card .prodi {
+      font-size: 0.7rem;
+      color: var(--tirta);
+      margin-top: 4px;
+    }
+
+    /* ===== PROGRAM KERJA CARD ===== */
+    .proker-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    @media (max-width: 780px) {
+      .proker-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .proker-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .proker-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+    }
+    .proker-card .card-header {
+      padding: 20px 24px 12px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border-bottom: 1px solid var(--line);
+    }
+    .proker-card .card-header .icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--paper-deep);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      color: var(--soil);
+      flex-shrink: 0;
+    }
+    .proker-card .card-header .title-group {
+      flex: 1;
+    }
+    .proker-card .card-header .title-group h3 {
+      font-size: 1.1rem;
+      margin-bottom: 2px;
+      color: var(--padi-deep);
+    }
+    .proker-card .card-header .title-group .badge {
+      display: inline-block;
+      font-size: 0.6rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 2px 10px;
+      border-radius: 999px;
+      background: var(--gabah);
+      color: var(--forest);
+    }
+    .proker-card .card-header .title-group .badge.utama {
+      background: var(--padi);
+      color: #fff;
+    }
+    .proker-card .card-header .title-group .badge.pendukung {
+      background: var(--tirta);
+      color: #fff;
+    }
+    .proker-card .card-header .title-group .badge.individu {
+      background: var(--soil);
+      color: #fff;
+    }
+
+    /* === GAMBAR PROKER === */
+    .proker-card .proker-gambar {
+      width: 100%;
+      height: 160px;
+      background: var(--paper-deep);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid var(--line);
+    }
+    .proker-card .proker-gambar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .proker-card .proker-gambar .placeholder {
+      font-size: 3rem;
+      color: var(--ink-soft);
+      opacity: 0.4;
+    }
+
+    .proker-card .card-body {
+      padding: 16px 24px 20px;
+      display: none;
+    }
+    .proker-card .card-body.open {
+      display: block;
+    }
+    .proker-card .card-body .detail-item {
+      margin-bottom: 10px;
+    }
+    .proker-card .card-body .detail-item strong {
+      font-weight: 500;
+      color: var(--ink);
+      display: inline-block;
+      min-width: 100px;
+    }
+    .proker-card .card-body .detail-item p {
+      margin: 4px 0 0 0;
+      color: var(--ink-soft);
+      font-size: 0.92rem;
+    }
+    .proker-card .card-footer {
+      padding: 8px 24px 16px;
+      border-top: 1px solid var(--line);
+      font-size: 0.8rem;
+      color: var(--tirta);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .proker-card .card-footer .pj {
+      font-weight: 400;
+    }
+    .proker-card .card-footer .pj strong {
+      font-weight: 500;
+    }
+    .proker-card .card-footer .toggle-icon {
+      transition: transform 0.3s;
+    }
+    .proker-card .card-footer .toggle-icon.open {
+      transform: rotate(180deg);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      padding: 70px 0 40px;
+      border-top: 1px solid var(--line);
+    }
+    footer.bg-dark-green {
+      background: var(--padi-deep);
+      color: #F4EFDD;
+      border-top: none;
+    }
+    footer.bg-dark-green h4 {
+      color: var(--gabah);
+    }
+    footer.bg-dark-green p,
+    footer.bg-dark-green li,
+    footer.bg-dark-green .foot-bottom {
+      color: #C6D2A9;
+    }
+    footer.bg-dark-green .foot-bottom {
+      border-top-color: rgba(255,255,255,0.15);
+    }
+    footer.bg-dark-green a {
+      color: #F4EFDD;
+    }
+    footer.bg-dark-green a:hover {
+      color: var(--gabah);
+    }
+    .foot-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr;
+      gap: 40px;
+    }
+    @media (max-width: 700px) {
+      .foot-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+    footer h4 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.66rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--soil);
+      margin-bottom: 14px;
+    }
+    footer p,
+    footer li {
+      color: var(--ink-soft);
+      font-size: 0.9rem;
+    }
+    footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .foot-bottom {
+      margin-top: 56px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.66rem;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .fade-in.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+    <!-- ===== NAV ===== -->
+    <div class="nav-outer">
+    <header class="nav">
+        <div class="nav-inner">
+        <!-- Link ke beranda -->
+        <a href="index.html" class="brand" style="text-decoration: none; display: flex; align-items: center; gap: 8px; color: inherit;">
+            <span class="leaf">🌾</span>
+            <span class="mark">Prajenan</span>
+        </a>
+        <nav class="links">
+            <a href="index.html">Beranda</a>
+            <a href="index.html#sejarah">Sejarah</a>
+            <a href="index.html#visi-misi">Visi &amp; Misi</a>
+            <a href="index.html#lokasi">Lokasi</a>
+            <a href="index.html#potensi">Potensi</a>
+            <a href="index.html#umkm">UMKM</a>
+            <a href="index.html#kegiatan">Kegiatan</a>
+            <a href="index.html#demografi">Demografi</a>
+        </nav>
+        <a href="kkn.html" class="nav-cta">Tim KKN</a>
+        </div>
+    </header>
+    </div>
+
+  <!-- ===== DIVIDER ===== -->
+  <hr class="contour-paper">
+
+  <!-- ===== ANGGOTA ===== -->
+  <section id="anggota" class="bg-paper">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag">Tim KKN</span>
+        <h2>Anggota Kelompok</h2>
+        <p>10 Mahasiswa dari berbagai program studi, bersinergi untuk memberdayakan Dukuh Prajenan.</p>
+      </div>
+      <div class="anggota-grid">
+        <div class="anggota-card"><div class="avatar"><i class="fa-solid fa-user"></i></div><div class="nama">Rafif Muhammad Z.</div><div class="nim">111230112</div><div class="prodi">Teknik Geologi</div></div>
+        <div class="anggota-card"><div class="avatar"><i class="fa-solid fa-user"></i></div><div class="nama">Estika Damayanti</div><div class="nim">114230112</div><div class="prodi">Teknik Lingkungan</div></div>
+        <div class="anggota-card"><div class="avatar"><i class="fa-solid fa-user"></i></div><div class="nama">Bernardus A. Cetta N. B.</div><div class="nim">122230019</div><div class="prodi">Teknik Industri</div></div>
+        <div class="anggota-card"><div class="avatar"><i class="fa-solid fa-user"></i></div><div class="nama">Ferawati Ginting</div><div class="nim">124230106</div><div class="prodi">Sistem Informasi</div></div>
+        <div class="anggota-card"><div class="avatar"><i class="fa-solid fa-user"></i></div><div class="nama">Farel Tsabita Fathiya N.</div><div class="nim">141230221</div><div class="prodi">Manajemen</div></div>
+        <div class="anggota-card"><div class="avatar"><i class="fa-solid fa-user"></i></div><div class="nama">Dimas Fauzil Adhim</div><div class="nim">141230527</div><div class="prodi">Manajemen</div></div>
+        <div class="anggota-card"><div class="avatar"><i class="fa-solid fa-user"></i></div><div class="nama">Sarah Aulia</div><div class="nim">142230236</div><div class="prodi">Akuntansi</div></div>
+        <div class="anggota-card"><div class="avatar"><i class="fa-solid fa-user"></i></div><div class="nama">Zaidan Azka Rizqullah</div><div class="nim">151230046</div><div class="prodi">Hubungan Internasional</div></div>
+        <div class="anggota-card"><div class="avatar"><i class="fa-solid fa-user"></i></div><div class="nama">Putri Alisyia Nazwa T.</div><div class="nim">152230030</div><div class="prodi">Administrasi Bisnis</div></div>
+        <div class="anggota-card"><div class="avatar"><i class="fa-solid fa-user"></i></div><div class="nama">Lea Kadungga</div><div class="nim">153220251</div><div class="prodi">Ilmu Komunikasi</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DIVIDER ===== -->
+  <hr class="contour-paper-deep">
+
+  <!-- ===== PROGRAM KERJA UTAMA (KELOMPOK) ===== -->
+  <section id="utama-kelompok" class="bg-paper-deep">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag">Program Utama</span>
+        <h2>Program Kerja Utama – Kelompok</h2>
+        <p>Tiga program unggulan yang dikerjakan secara bersama-sama oleh seluruh anggota kelompok.</p>
+      </div>
+      <div class="proker-grid">
+        <!-- Card 1 -->
+        <div class="proker-card" onclick="toggleDetail(this)">
+          <div class="card-header">
+            <div class="icon"><i class="fa-solid fa-trash-can"></i></div>
+            <div class="title-group">
+              <h3>Edukasi &amp; Pengelolaan Sampah</h3>
+              <span class="badge utama">Kelompok</span>
+            </div>
+          </div>
+          <div class="proker-gambar">
+            <img src="img/proker/prokerSampah.jpg" alt="Edukasi Sampah" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder\'><i class=\'fa-solid fa-image\'></i></div>';">
+          </div>
+          <div class="card-body">
+            <div class="detail-item"><strong>📅 Tanggal:</strong> Selasa, 14 Juli 2026 &amp; Minggu, 26 Juli 2026</div>
+            <div class="detail-item"><strong>📍 Tempat:</strong> Dsn. Prajenan, RT 05 &amp; 06</div>
+            <div class="detail-item"><strong>⏰ Waktu:</strong> 13.00–15.00 WIB &amp; 07.00–12.00 WIB</div>
+            <div class="detail-item"><strong>📝 Deskripsi:</strong> Pengadaan tempat sampah pilah, sosialisasi pemilahan organik/anorganik, dan demonstrasi pengolahan sampah organik menjadi kompos.</div>
+            <div class="detail-item"><strong>🎯 Tujuan:</strong> Meningkatkan kesadaran dan kemampuan masyarakat dalam memilah dan mengolah sampah rumah tangga secara mandiri.</div>
+            <div class="detail-item"><strong>💡 Manfaat:</strong> Mengurangi kebiasaan membakar sampah dan pencemaran sungai, menghasilkan pupuk kompos.</div>
+          </div>
+          <div class="card-footer">
+            <span class="pj"><strong>PJ:</strong> Estika Damayanti · Ferawati Ginting</span>
+            <span class="toggle-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="proker-card" onclick="toggleDetail(this)">
+          <div class="card-header">
+            <div class="icon"><i class="fa-solid fa-water"></i></div>
+            <div class="title-group">
+              <h3>Aksi Bersih Sungai &amp; Edukasi</h3>
+              <span class="badge utama">Kelompok</span>
+            </div>
+          </div>
+          <div class="proker-gambar">
+            <img src="img/proker/prokerSungai.jpg" alt="Bersih Sungai" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder\'><i class=\'fa-solid fa-image\'></i></div>';">
+          </div>
+          <div class="card-body">
+            <div class="detail-item"><strong>📅 Tanggal:</strong> Minggu, 26 Juli 2026</div>
+            <div class="detail-item"><strong>📍 Tempat:</strong> Sepanjang sungai bagian barat Dsn. Prajenan</div>
+            <div class="detail-item"><strong>⏰ Waktu:</strong> 07.00–12.00 WIB</div>
+            <div class="detail-item"><strong>📝 Deskripsi:</strong> Pembersihan sungai bersama masyarakat dan pemasangan plang edukasi lingkungan di titik rawan sampah.</div>
+            <div class="detail-item"><strong>🎯 Tujuan:</strong> Mengurangi pencemaran sungai dan meningkatkan kesadaran masyarakat akan pentingnya menjaga kebersihan lingkungan.</div>
+            <div class="detail-item"><strong>💡 Manfaat:</strong> Lingkungan sungai lebih bersih, tersedia media edukasi permanen.</div>
+          </div>
+          <div class="card-footer">
+            <span class="pj"><strong>PJ:</strong> Bernardus A. Cetta N. B. · Zaidan Azka Rizqullah</span>
+            <span class="toggle-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="proker-card" onclick="toggleDetail(this)">
+          <div class="card-header">
+            <div class="icon"><i class="fa-solid fa-masks-theater"></i></div>
+            <div class="title-group">
+              <h3>Pentas Seni Prajenan</h3>
+              <span class="badge utama">Kelompok</span>
+            </div>
+          </div>
+          <div class="proker-gambar">
+            <img src="img/proker/prokerPentas.jpg" alt="Pentas Seni" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder\'><i class=\'fa-solid fa-image\'></i></div>';">
+          </div>
+          <div class="card-body">
+            <div class="detail-item"><strong>📅 Tanggal:</strong> Kamis, 29 Juli 2026</div>
+            <div class="detail-item"><strong>📍 Tempat:</strong> Balai Desa Baturan</div>
+            <div class="detail-item"><strong>⏰ Waktu:</strong> 19.00–21.00 WIB</div>
+            <div class="detail-item"><strong>📝 Deskripsi:</strong> Pentas seni budaya lokal sebagai wadah ekspresi dan penguatan interaksi sosial masyarakat.</div>
+            <div class="detail-item"><strong>🎯 Tujuan:</strong> Memperkuat interaksi sosial, melestarikan seni budaya lokal, dan memberikan hiburan positif.</div>
+            <div class="detail-item"><strong>💡 Manfaat:</strong> Meningkatkan partisipasi masyarakat, mengoptimalkan potensi rumah seni.</div>
+          </div>
+          <div class="card-footer">
+            <span class="pj"><strong>PJ:</strong> Sarah Aulia · Dimas Fauzil Adhim</span>
+            <span class="toggle-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DIVIDER ===== -->
+  <hr class="contour-paper">
+
+  <!-- ===== PROGRAM KERJA PENDUKUNG ===== -->
+  <section id="pendukung" class="bg-paper">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag">Program Pendukung</span>
+        <h2>Program Kerja Pendukung</h2>
+        <p>Kegiatan tambahan untuk memperkuat ikatan sosial dan mendukung program utama.</p>
+      </div>
+      <div class="proker-grid">
+        <div class="proker-card" onclick="toggleDetail(this)">
+          <div class="card-header">
+            <div class="icon"><i class="fa-solid fa-book-quran"></i></div>
+            <div class="title-group">
+              <h3>Pendampingan TPA</h3>
+              <span class="badge pendukung">Pendukung</span>
+            </div>
+          </div>
+          <div class="proker-gambar">
+            <img src="img/proker/prokerTpa.jpg" alt="Pendampingan TPA" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder\'><i class=\'fa-solid fa-image\'></i></div>';">
+          </div>
+          <div class="card-body">
+            <div class="detail-item"><strong>📅 Tanggal:</strong> 6, 11, 12, 15, 18, 19, 22, 25, 26 Juli 2026</div>
+            <div class="detail-item"><strong>📍 Tempat:</strong> Masjid Al-Qadar</div>
+            <div class="detail-item"><strong>⏰ Waktu:</strong> 16.30–17.30 WIB</div>
+            <div class="detail-item"><strong>📝 Deskripsi:</strong> Pendampingan rutin pembelajaran Al-Qur'an dan pendidikan agama Islam dasar.</div>
+            <div class="detail-item"><strong>🎯 Tujuan:</strong> Mendukung kualitas kegiatan TPA dan memberikan motivasi bagi anak-anak.</div>
+            <div class="detail-item"><strong>💡 Manfaat:</strong> Anak-anak lebih semangat belajar mengaji, pengajar terbantu.</div>
+          </div>
+          <div class="card-footer">
+            <span class="pj"><strong>PJ:</strong> Rafif Muhammad Z.</span>
+            <span class="toggle-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+        </div>
+        <div class="proker-card" onclick="toggleDetail(this)">
+          <div class="card-header">
+            <div class="icon"><i class="fa-solid fa-paintbrush"></i></div>
+            <div class="title-group">
+              <h3>Lomba Mewarnai Anak</h3>
+              <span class="badge pendukung">Pendukung</span>
+            </div>
+          </div>
+          <div class="proker-gambar">
+            <img src="img/proker/prokerMewarnai.jpg" alt="Lomba Mewarnai" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder\'><i class=\'fa-solid fa-image\'></i></div>';">
+          </div>
+          <div class="card-body">
+            <div class="detail-item"><strong>📅 Tanggal:</strong> Sabtu, 18 Juli 2026</div>
+            <div class="detail-item"><strong>📍 Tempat:</strong> Posko KKN (rumah RT 05)</div>
+            <div class="detail-item"><strong>⏰ Waktu:</strong> 14.30–17.30 WIB</div>
+            <div class="detail-item"><strong>📝 Deskripsi:</strong> Lomba mewarnai untuk anak-anak TK dan SD sebagai kegiatan hiburan edukatif.</div>
+            <div class="detail-item"><strong>🎯 Tujuan:</strong> Merangsang kreativitas dan semangat kompetisi sehat.</div>
+            <div class="detail-item"><strong>💡 Manfaat:</strong> Anak-anak mendapatkan pengalaman berkreasi dan bersosialisasi.</div>
+          </div>
+          <div class="card-footer">
+            <span class="pj"><strong>PJ:</strong> Farel Tsabita Fathiya N.</span>
+            <span class="toggle-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+        </div>
+        <div class="proker-card" onclick="toggleDetail(this)">
+          <div class="card-header">
+            <div class="icon"><i class="fa-solid fa-person-walking"></i></div>
+            <div class="title-group">
+              <h3>Senam Bersama Masyarakat</h3>
+              <span class="badge pendukung">Pendukung</span>
+            </div>
+          </div>
+          <div class="proker-gambar">
+            <img src="img/proker/prokerSenam.jpg" alt="Senam Bersama" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder\'><i class=\'fa-solid fa-image\'></i></div>';">
+          </div>
+          <div class="card-body">
+            <div class="detail-item"><strong>📅 Tanggal:</strong> Minggu, 12 &amp; 19 Juli 2026</div>
+            <div class="detail-item"><strong>📍 Tempat:</strong> Rumah Ibu Ning, Dsn. Prajenan</div>
+            <div class="detail-item"><strong>⏰ Waktu:</strong> 15.00–17.30 WIB</div>
+            <div class="detail-item"><strong>📝 Deskripsi:</strong> Senam pagi bersama warga sebagai upaya menghidupkan kembali aktivitas sosial dan olahraga.</div>
+            <div class="detail-item"><strong>🎯 Tujuan:</strong> Meningkatkan kesehatan fisik dan mempererat hubungan sosial.</div>
+            <div class="detail-item"><strong>💡 Manfaat:</strong> Terbentuknya kebiasaan hidup sehat dan kebersamaan.</div>
+          </div>
+          <div class="card-footer">
+            <span class="pj"><strong>PJ:</strong> Putri Alisyia Nazwa T.</span>
+            <span class="toggle-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+        </div>
+        <div class="proker-card" onclick="toggleDetail(this)">
+          <div class="card-header">
+            <div class="icon"><i class="fa-solid fa-broom"></i></div>
+            <div class="title-group">
+              <h3>Kerja Bakti Lingkungan</h3>
+              <span class="badge pendukung">Pendukung</span>
+            </div>
+          </div>
+          <div class="proker-gambar">
+            <img src="img/proker/prokerBakti.jpg" alt="Kerja Bakti" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder\'><i class=\'fa-solid fa-image\'></i></div>';">
+          </div>
+          <div class="card-body">
+            <div class="detail-item"><strong>📅 Tanggal:</strong> Minggu, 26 Juli 2026</div>
+            <div class="detail-item"><strong>📍 Tempat:</strong> Seluruh area Dsn. Prajenan</div>
+            <div class="detail-item"><strong>⏰ Waktu:</strong> 15.00–17.30 WIB</div>
+            <div class="detail-item"><strong>📝 Deskripsi:</strong> Gotong royong membersihkan jalan dusun, selokan, masjid, dan fasilitas umum.</div>
+            <div class="detail-item"><strong>🎯 Tujuan:</strong> Menjaga kebersihan dan kenyamanan lingkungan serta memperkuat gotong royong.</div>
+            <div class="detail-item"><strong>💡 Manfaat:</strong> Lingkungan lebih bersih, semangat gotong royong meningkat.</div>
+          </div>
+          <div class="card-footer">
+            <span class="pj"><strong>PJ:</strong> Lea Kadungga</span>
+            <span class="toggle-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DIVIDER ===== -->
+  <hr class="contour-paper-deep">
+
+  <!-- ===== PROGRAM KERJA INDIVIDU ===== -->
+  <section id="individu" class="bg-paper-deep">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag">Program Individu</span>
+        <h2>Program Kerja Individu</h2>
+        <p>10 program yang dikerjakan secara mandiri oleh masing-masing anggota, sesuai dengan bidang keahlian.</p>
+      </div>
+      <div class="proker-grid">
+        <div class="proker-card" onclick="toggleDetail(this)">
+          <div class="card-header">
+            <div class="icon"><i class="fa-solid fa-globe"></i></div>
+            <div class="title-group">
+              <h3>Website Profil Dukuh</h3>
+              <span class="badge individu">Individu</span>
+            </div>
+          </div>
+          <div class="proker-gambar">
+            <img src="img/proker/prokerWebsite.jpg" alt="Website Profil" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder\'><i class=\'fa-solid fa-image\'></i></div>';">
+          </div>
+          <div class="card-body">
+            <div class="detail-item"><strong>📅 Tanggal:</strong> Selama periode KKN</div>
+            <div class="detail-item"><strong>📍 Tempat:</strong> Dsn. Prajenan</div>
+            <div class="detail-item"><strong>⏰ Waktu:</strong> Fleksibel</div>
+            <div class="detail-item"><strong>📝 Deskripsi:</strong> Pengembangan website profil dan potensi Dukuh Prajenan menggunakan Figma, VS Code, hosting &amp; domain.</div>
+            <div class="detail-item"><strong>🎯 Tujuan:</strong> Menyediakan media informasi digital untuk promosi potensi lokal.</div>
+            <div class="detail-item"><strong>💡 Manfaat:</strong> Meningkatkan visibilitas dan akses informasi bagi masyarakat luas.</div>
+          </div>
+          <div class="card-footer">
+            <span class="pj"><strong>PJ:</strong> Ferawati Ginting</span>
+            <span class="toggle-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+        </div>
+        <div class="proker-card" onclick="toggleDetail(this)">
+          <div class="card-header">
+            <div class="icon"><i class="fa-solid fa-map"></i></div>
+            <div class="title-group">
+              <h3>Peta Administratif</h3>
+              <span class="badge individu">Individu</span>
+            </div>
+          </div>
+          <div class="proker-gambar">
+            <img src="img/proker/prokerPeta.jpg" alt="Peta Administratif" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder\'><i class=\'fa-solid fa-image\'></i></div>';">
+          </div>
+          <div class="card-body">
+            <div class="detail-item"><strong>📅 Tanggal:</strong> Selama periode KKN</div>
+            <div class="detail-item"><strong>📍 Tempat:</strong> Dsn. Prajenan</div>
+            <div class="detail-item"><strong>⏰ Waktu:</strong> Fleksibel</div>
+            <div class="detail-item"><strong>📝 Deskripsi:</strong> Pembuatan peta titik administratif menggunakan ArcGIS, mencakup batas wilayah, fasilitas umum, dan lokasi penting.</div>
+            <div class="detail-item"><strong>🎯 Tujuan:</strong> Menyediakan dokumen peta akurat untuk perangkat dusun.</div>
+            <div class="detail-item"><strong>💡 Manfaat:</strong> Memudahkan pendataan dan perencanaan wilayah.</div>
+          </div>
+          <div class="card-footer">
+            <span class="pj"><strong>PJ:</strong> Rafif Muhammad Z.</span>
+            <span class="toggle-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+        </div>
+        <div class="proker-card" onclick="toggleDetail(this)">
+          <div class="card-header">
+            <div class="icon"><i class="fa-solid fa-recycle"></i></div>
+            <div class="title-group">
+              <h3>Pengomposan Sampah Organik</h3>
+              <span class="badge individu">Individu</span>
+            </div>
+          </div>
+          <div class="proker-gambar">
+            <img src="img/proker/prokerKompos.jpg" alt="Pengomposan" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder\'><i class=\'fa-solid fa-image\'></i></div>';">
+          </div>
+          <div class="card-body">
+            <div class="detail-item"><strong>📅 Tanggal:</strong> Selasa, 14 Juli 2026</div>
+            <div class="detail-item"><strong>📍 Tempat:</strong> Posko KKN (rumah RT 05)</div>
+            <div class="detail-item"><strong>⏰ Waktu:</strong> 13.00–15.00 WIB</div>
+            <div class="detail-item"><strong>📝 Deskripsi:</strong> Sosialisasi dan demonstrasi pengolahan sampah organik menjadi kompos dengan metode ember tumpuk/takakura.</div>
+            <div class="detail-item"><strong>🎯 Tujuan:</strong> Meningkatkan pemahaman masyarakat dalam mengolah sampah organik.</div>
+            <div class="detail-item"><strong>💡 Manfaat:</strong> Mengurangi volume sampah dan menghasilkan pupuk organik.</div>
+          </div>
+          <div class="card-footer">
+            <span class="pj"><strong>PJ:</strong> Estika Damayanti</span>
+            <span class="toggle-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+        </div>
+        <div class="proker-card" onclick="toggleDetail(this)">
+          <div class="card-header">
+            <div class="icon"><i class="fa-solid fa-fish"></i></div>
+            <div class="title-group">
+              <h3>UMKM Lele &amp; Pembukuan</h3>
+              <span class="badge individu">Individu</span>
+            </div>
+          </div>
+          <div class="proker-gambar">
+            <img src="img/proker/prokerLele.jpg" alt="UMKM Lele" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder\'><i class=\'fa-solid fa-image\'></i></div>';">
+          </div>
+          <div class="card-body">
+            <div class="detail-item"><strong>📅 Tanggal:</strong> 6, 10, 12 Juli 2026</div>
+            <div class="detail-item"><strong>📍 Tempat:</strong> Posko KKN &amp; Rumah Ibu Prapto</div>
+            <div class="detail-item"><strong>⏰ Waktu:</strong> 09.00–14.00 WIB</div>
+            <div class="detail-item"><strong>📝 Deskripsi:</strong> Fasilitasi pembentukan kelompok UMKM lele dan pelatihan pembukuan keuangan dasar menggunakan Google Sheets.</div>
+            <div class="detail-item"><strong>🎯 Tujuan:</strong> Mendorong ketahanan pangan dan kemampuan pengelolaan keuangan.</div>
+            <div class="detail-item"><strong>💡 Manfaat:</strong> Masyarakat memiliki usaha baru dan pembukuan tertib.</div>
+          </div>
+          <div class="card-footer">
+            <span class="pj"><strong>PJ:</strong> Sarah Aulia</span>
+            <span class="toggle-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+        </div>
+        <div class="proker-card" onclick="toggleDetail(this)">
+          <div class="card-header">
+            <div class="icon"><i class="fa-solid fa-bullhorn"></i></div>
+            <div class="title-group">
+              <h3>Edukasi Media Promosi</h3>
+              <span class="badge individu">Individu</span>
+            </div>
+          </div>
+          <div class="proker-gambar">
+            <img src="img/proker/prokerPromosi.jpg" alt="Media Promosi" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder\'><i class=\'fa-solid fa-image\'></i></div>';">
+          </div>
+          <div class="card-body">
+            <div class="detail-item"><strong>📅 Tanggal:</strong> Senin, 6 Juli 2026</div>
+            <div class="detail-item"><strong>📍 Tempat:</strong> Posko KKN</div>
+            <div class="detail-item"><strong>⏰ Waktu:</strong> 09.00–11.30 WIB</div>
+            <div class="detail-item"><strong>📝 Deskripsi:</strong> Pelatihan strategi pemasaran digital dan pembuatan konten promosi melalui media sosial.</div>
+            <div class="detail-item"><strong>🎯 Tujuan:</strong> Meningkatkan kemampuan promosi produk UMKM.</div>
+            <div class="detail-item"><strong>💡 Manfaat:</strong> Jangkauan pasar lebih luas, pendapatan meningkat.</div>
+          </div>
+          <div class="card-footer">
+            <span class="pj"><strong>PJ:</strong> Lea Kadungga</span>
+            <span class="toggle-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+        </div>
+        <div class="proker-card" onclick="toggleDetail(this)">
+          <div class="card-header">
+            <div class="icon"><i class="fa-solid fa-box"></i></div>
+            <div class="title-group">
+              <h3>Edukasi Kemasan Kedap Udara</h3>
+              <span class="badge individu">Individu</span>
+            </div>
+          </div>
+          <div class="proker-gambar">
+            <img src="img/proker/prokerKemasan.jpg" alt="Edukasi Kemasan" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder\'><i class=\'fa-solid fa-image\'></i></div>';">
+          </div>
+          <div class="card-body">
+            <div class="detail-item"><strong>📅 Tanggal:</strong> Senin, 6 Juli 2026</div>
+            <div class="detail-item"><strong>📍 Tempat:</strong> Posko KKN</div>
+            <div class="detail-item"><strong>⏰ Waktu:</strong> 09.00–11.30 WIB</div>
+            <div class="detail-item"><strong>📝 Deskripsi:</strong> Sosialisasi dan demonstrasi pemilihan kemasan kedap udara untuk menjaga kualitas produk UMKM.</div>
+            <div class="detail-item"><strong>🎯 Tujuan:</strong> Meningkatkan pemahaman pelaku UMKM tentang standar pengemasan.</div>
+            <div class="detail-item"><strong>💡 Manfaat:</strong> Produk lebih tahan lama dan bernilai jual lebih tinggi.</div>
+          </div>
+          <div class="card-footer">
+            <span class="pj"><strong>PJ:</strong> Farel Tsabita Fathiya N.</span>
+            <span class="toggle-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+        </div>
+        <div class="proker-card" onclick="toggleDetail(this)">
+          <div class="card-header">
+            <div class="icon"><i class="fa-solid fa-qrcode"></i></div>
+            <div class="title-group">
+              <h3>Sosialisasi QRIS</h3>
+              <span class="badge individu">Individu</span>
+            </div>
+          </div>
+          <div class="proker-gambar">
+            <img src="img/proker/prokerQris.jpg" alt="Sosialisasi QRIS" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder\'><i class=\'fa-solid fa-image\'></i></div>';">
+          </div>
+          <div class="card-body">
+            <div class="detail-item"><strong>📅 Tanggal:</strong> 8–9 Juli 2026</div>
+            <div class="detail-item"><strong>📍 Tempat:</strong> UMKM sekitar Dsn. Prajenan</div>
+            <div class="detail-item"><strong>⏰ Waktu:</strong> 10.00–14.00 WIB</div>
+            <div class="detail-item"><strong>📝 Deskripsi:</strong> Pendampingan pendaftaran dan aktivasi QRIS serta simulasi transaksi digital.</div>
+            <div class="detail-item"><strong>🎯 Tujuan:</strong> Meningkatkan kemampuan pelaku UMKM dalam pembayaran digital.</div>
+            <div class="detail-item"><strong>💡 Manfaat:</strong> Transaksi lebih mudah dan mendukung inklusi keuangan.</div>
+          </div>
+          <div class="card-footer">
+            <span class="pj"><strong>PJ:</strong> Putri Alisyia Nazwa T.</span>
+            <span class="toggle-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+        </div>
+        <div class="proker-card" onclick="toggleDetail(this)">
+          <div class="card-header">
+            <div class="icon"><i class="fa-solid fa-palette"></i></div>
+            <div class="title-group">
+              <h3>Edukasi Kreativitas Clay</h3>
+              <span class="badge individu">Individu</span>
+            </div>
+          </div>
+          <div class="proker-gambar">
+            <img src="img/proker/prokerClay.jpg" alt="Edukasi Clay" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder\'><i class=\'fa-solid fa-image\'></i></div>';">
+          </div>
+          <div class="card-body">
+            <div class="detail-item"><strong>📅 Tanggal:</strong> Selasa, 21 Juli 2026</div>
+            <div class="detail-item"><strong>📍 Tempat:</strong> SDN 1 Baturan</div>
+            <div class="detail-item"><strong>⏰ Waktu:</strong> 09.30–12.00 WIB</div>
+            <div class="detail-item"><strong>📝 Deskripsi:</strong> Kegiatan seni clay untuk mengembangkan kreativitas dan motorik halus anak-anak.</div>
+            <div class="detail-item"><strong>🎯 Tujuan:</strong> Memberikan pengalaman belajar menyenangkan di luar akademik.</div>
+            <div class="detail-item"><strong>💡 Manfaat:</strong> Anak-anak lebih percaya diri dan terampil.</div>
+          </div>
+          <div class="card-footer">
+            <span class="pj"><strong>PJ:</strong> Dimas Fauzil Adhim</span>
+            <span class="toggle-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+        </div>
+        <div class="proker-card" onclick="toggleDetail(this)">
+          <div class="card-header">
+            <div class="icon"><i class="fa-solid fa-language"></i></div>
+            <div class="title-group">
+              <h3>Bimbel Bahasa Inggris</h3>
+              <span class="badge individu">Individu</span>
+            </div>
+          </div>
+          <div class="proker-gambar">
+            <img src="img/proker/prokerInggris.jpg" alt="Bimbel Inggris" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder\'><i class=\'fa-solid fa-image\'></i></div>';">
+          </div>
+          <div class="card-body">
+            <div class="detail-item"><strong>📅 Tanggal:</strong> Rabu, 15 Juli 2026</div>
+            <div class="detail-item"><strong>📍 Tempat:</strong> SDN 1 Baturan</div>
+            <div class="detail-item"><strong>⏰ Waktu:</strong> 07.00–10.00 WIB</div>
+            <div class="detail-item"><strong>📝 Deskripsi:</strong> Bimbingan belajar Bahasa Inggris dasar dengan metode interaktif (permainan, lagu, percakapan).</div>
+            <div class="detail-item"><strong>🎯 Tujuan:</strong> Meningkatkan kemampuan dasar Bahasa Inggris anak-anak.</div>
+            <div class="detail-item"><strong>💡 Manfaat:</strong> Anak-anak lebih siap menghadapi era global.</div>
+          </div>
+          <div class="card-footer">
+            <span class="pj"><strong>PJ:</strong> Zaidan Azka Rizqullah</span>
+            <span class="toggle-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+        </div>
+        <div class="proker-card" onclick="toggleDetail(this)">
+          <div class="card-header">
+            <div class="icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="title-group">
+              <h3>Media Informasi Nomor Darurat</h3>
+              <span class="badge individu">Individu</span>
+            </div>
+          </div>
+          <div class="proker-gambar">
+            <img src="img/proker/prokerDarurat.jpg" alt="Nomor Darurat" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder\'><i class=\'fa-solid fa-image\'></i></div>';">
+          </div>
+          <div class="card-body">
+            <div class="detail-item"><strong>📅 Tanggal:</strong> Kamis, 23 Juli 2026</div>
+            <div class="detail-item"><strong>📍 Tempat:</strong> Seluruh Dsn. Prajenan</div>
+            <div class="detail-item"><strong>⏰ Waktu:</strong> 11.00–14.00 WIB</div>
+            <div class="detail-item"><strong>📝 Deskripsi:</strong> Pembuatan dan pemasangan stiker/poster nomor darurat (pemadam, puskesmas, polisi, ambulans, PLN) di titik strategis.</div>
+            <div class="detail-item"><strong>🎯 Tujuan:</strong> Meningkatkan kesiapsiagaan masyarakat dalam situasi darurat.</div>
+            <div class="detail-item"><strong>💡 Manfaat:</strong> Warga mudah mengakses nomor layanan penting saat dibutuhkan.</div>
+          </div>
+          <div class="card-footer">
+            <span class="pj"><strong>PJ:</strong> Bernardus A. Cetta N. B.</span>
+            <span class="toggle-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DIVIDER ===== -->
+  <hr class="contour-paper">
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-dark-green">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <h4>Dukuh Prajenan</h4>
+          <p>Padukuhan agraris di Kabupaten Klaten, Jawa Tengah. Situs profil ini disusun untuk memperkenalkan sejarah, lokasi, dan potensi wilayah kepada masyarakat luas.</p>
+        </div>
+        <div>
+          <h4>Navigasi</h4>
+          <ul>
+            <li><a href="index.html#sejarah">Sejarah</a></li>
+            <li><a href="index.html#lokasi">Lokasi</a></li>
+            <li><a href="index.html#potensi">Potensi Desa</a></li>
+            <li><a href="index.html#umkm">UMKM</a></li>
+            <li><a href="index.html#kegiatan">Kegiatan Masyarakat</a></li>
+            <li><a href="kkn.html">Laporan KKN</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Kontak</h4>
+          <ul>
+            <li>Kepala Desa: Slamet Sutrisno</li>
+            <li>Alamat: Jl. Cetok, Prajenan, Baturan,<br>Kec. Gantiwarno, Kab. Klaten,<br>Jawa Tengah 57455</li>
+            <li>Telepon/WA: [Nomor Kontak]</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>© KKN-BN AD.84.307 UPNYK</span>
+        <span>Data 2025</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== JAVASCRIPT TOGGLE DETAIL ===== -->
+  <script>
+    function toggleDetail(card) {
+      const body = card.querySelector('.card-body');
+      const icon = card.querySelector('.toggle-icon');
+      if (body.classList.contains('open')) {
+        body.classList.remove('open');
+        icon.classList.remove('open');
+      } else {
+        body.classList.add('open');
+        icon.classList.add('open');
+      }
+    }
+
+    // FADE-IN
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+    }, { threshold: 0, rootMargin: '0px 0px -10% 0px' });
+    document.querySelectorAll('section').forEach(s => {
+      s.classList.add('fade-in');
+      io.observe(s);
+    });
+  </script>
+</body>
+</html>
