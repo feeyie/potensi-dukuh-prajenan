@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,450;9..144,560;9..144,650&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <style>
-        /* ===== RESET & VARIABEL ===== */
+        /* ===== RESET & VARIABEL (sama dengan index) ===== */
         :root {
             --paper: #F7F3E7;
             --paper-deep: #EFE7D2;
@@ -30,14 +30,26 @@
         * {
             box-sizing: border-box;
         }
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
         body {
             margin: 0;
+            overflow-x: hidden;
             background: var(--paper);
             color: var(--ink);
             font-family: 'Poppins', sans-serif;
             font-weight: 300;
             font-size: 16px;
             line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            padding-top: 85px;
+        }
+        @media (max-width: 640px) {
+            body {
+                padding-top: 75px;
+            }
         }
         h1, h2, h3, .display {
             font-family: 'Fraunces', serif;
@@ -54,21 +66,31 @@
             color: inherit;
             text-decoration: none;
         }
+        img {
+            max-width: 100%;
+            display: block;
+        }
         .wrap {
             max-width: 1120px;
             margin: 0 auto;
             padding: 0 32px;
         }
         @media (max-width: 640px) {
-            .wrap { padding: 0 20px; }
+            .wrap {
+                padding: 0 20px;
+            }
         }
 
-        /* ===== NAV ===== */
+        /* ===== NAV (sama dengan index) ===== */
         .nav-outer {
-            position: sticky;
+            position: fixed;
             top: 0;
-            z-index: 50;
-            padding: 18px 20px 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+            padding: 4px 20px 0;
+            background: transparent;
+            pointer-events: none;
         }
         header.nav {
             max-width: 1120px;
@@ -76,21 +98,26 @@
             background: var(--forest);
             border-radius: 999px;
             box-shadow: 0 12px 30px -12px rgba(22, 38, 29, 0.45);
+            pointer-events: auto;
         }
         .nav-inner {
             padding: 12px 12px 12px 26px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 20px;
+            gap: 10px;
         }
         @media (max-width: 640px) {
-            .nav-inner { padding: 10px 10px 10px 18px; }
+            .nav-inner {
+                padding: 10px 10px 10px 18px;
+            }
         }
         .brand {
             display: flex;
             align-items: center;
             gap: 8px;
+            text-decoration: none;
+            color: inherit;
         }
         .brand .leaf {
             color: var(--gabah);
@@ -102,29 +129,33 @@
             font-size: 1.15rem;
             color: #FBF7E9;
         }
-        .nav-links {
+        nav.links {
             display: flex;
-            gap: 26px;
+            gap: 12px;
             font-size: 0.85rem;
         }
-        .nav-links a {
+        nav.links a {
+            text-decoration: none;
             color: #C9D4C4;
             font-weight: 400;
             padding-bottom: 3px;
             border-bottom: 1px solid transparent;
             transition: color .2s;
         }
-        .nav-links a:hover {
+        nav.links a:hover {
             color: var(--gabah);
         }
         @media (max-width: 900px) {
-            .nav-links { display: none; }
+            nav.links {
+                display: none;
+            }
         }
         .nav-cta {
             background: var(--gabah);
             color: var(--forest);
+            text-decoration: none;
             font-weight: 500;
-            padding: 11px 24px;
+            padding: 11px 12px;
             border-radius: 999px;
             font-size: 0.85rem;
             white-space: nowrap;
@@ -162,22 +193,30 @@
             font-weight: 300;
         }
 
-        /* ===== STAT ROW ===== */
+        /* ===== STAT ROW - 3 KOLOM RATA ===== */
         .stat-row {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 1px;
             background: var(--line);
             border: 1px solid var(--line);
             margin-bottom: 48px;
         }
         @media (max-width: 780px) {
-            .stat-row { grid-template-columns: repeat(2, 1fr); }
+            .stat-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 480px) {
+            .stat-row {
+                grid-template-columns: 1fr;
+            }
         }
         .stat-cell {
             background: var(--paper);
             padding: 30px 24px;
             border-radius: 14px;
+            text-align: center;
         }
         .stat-cell .v {
             font-family: 'Fraunces', serif;
@@ -271,6 +310,12 @@
             font-weight: 400;
             color: var(--ink);
             margin-bottom: 4px;
+        }
+        .umkm-card .jangkauan {
+            font-size: 0.78rem;
+            color: var(--tirta);
+            margin-top: 6px;
+            font-style: italic;
         }
         .umkm-card .tk {
             display: inline-block;
@@ -442,22 +487,26 @@
 </head>
 <body>
 
-    <!-- ===== NAV ===== -->
+    <!-- ===== NAV (sama dengan index) ===== -->
     <div class="nav-outer">
         <header class="nav">
             <div class="nav-inner">
-                <div class="brand">
+                <a href="index.html" class="brand">
                     <span class="leaf">🌾</span>
                     <span class="mark">Prajenan</span>
-                </div>
-                <div class="nav-links">
+                </a>
+                <nav class="links">
+                    <a href="index.html">Beranda</a>
                     <a href="index.html#sejarah">Sejarah</a>
+                    <a href="index.html#visi-misi">Visi &amp; Misi</a>
+                    <a href="index.html#lokasi">Lokasi</a>
                     <a href="index.html#potensi">Potensi</a>
+                    <!-- MENU UMKM AKTIF dengan garis bawah -->
+                    <a href="umkm.html" style="color:var(--gabah); border-bottom-color:var(--gabah);">UMKM</a>
                     <a href="index.html#kegiatan">Kegiatan</a>
-                    <a href="index.html#umkm">UMKM</a>
                     <a href="index.html#demografi">Demografi</a>
-                </div>
-                <a href="index.html" class="nav-cta">← Kembali ke Beranda</a>
+                </nav>
+                <a href="kkn.html" class="nav-cta">Tim KKN</a>
             </div>
         </header>
     </div>
@@ -467,16 +516,13 @@
         <div class="wrap">
             <div class="section-head">
                 <span class="tag">Ekonomi Warga · Data 2025</span>
-                <h2>Seluruh Data UMKM Dukuh Prajenan</h2>
-                <p>Berikut adalah daftar lengkap 38 unit usaha mikro yang tercatat aktif di wilayah Prajenan.</p>
+                <h2>Data UMKM Dukuh Prajenan</h2>
+                <p>Berikut adalah daftar 29 unit usaha mikro yang tercatat aktif di wilayah Prajenan (RT 05 dan RT 06) berdasarkan pendataan Kecamatan Gantiwarno tahun 2025.</p>
             </div>
 
-            <!-- Statistik -->
-            <div class="stat-row">
-                <div class="stat-cell"><div class="v">38</div><div class="u">UMKM Aktif (2025)</div></div>
-                <div class="stat-cell"><div class="v">56</div><div class="u">Tenaga Kerja Terlibat</div></div>
-                <div class="stat-cell"><div class="v">Rp429,06 jt</div><div class="u">Total Omset / Tahun</div></div>
-                <div class="stat-cell"><div class="v">Rp330,8 jt</div><div class="u">Total Modal Usaha</div></div>
+            <!-- Statistik - 3 kolom rata -->
+            <div class="stat-row" id="statRow">
+                <!-- diisi JS -->
             </div>
 
             <!-- Top 5 Sektor Terbanyak -->
@@ -497,7 +543,7 @@
 
             <div class="note">
                 <span class="mono" style="color:var(--soil);font-size:0.7rem;">Catatan</span>
-                <p style="margin-top:2px;">Data diolah dari pendataan UMKM Kecamatan Gantiwarno tahun 2025.</p>
+                <p style="margin-top:2px;">Data diolah dari pendataan UMKM Kecamatan Gantiwarno tahun 2025. Omset yang tercantum adalah <strong>omset per tahun</strong>.</p>
             </div>
 
             <div style="text-align:center;">
@@ -519,10 +565,10 @@
                     <ul>
                         <li><a href="index.html#sejarah">Sejarah</a></li>
                         <li><a href="index.html#lokasi">Lokasi</a></li>
-                        <li><a href="index.html#potensi">Potensi</a></li>
-                        <li><a href="index.html#kegiatan">Kegiatan</a></li>
+                        <li><a href="index.html#potensi">Potensi Desa</a></li>
                         <li><a href="umkm.html">UMKM Detail</a></li>
-                        <li><a href="demografi.html">Demografi Detail</a></li>
+                        <li><a href="index.html#kegiatan">Kegiatan Masyarakat</a></li>
+                        <li><a href="kkn.html">Laporan KKN</a></li>
                     </ul>
                 </div>
                 <div>
@@ -545,12 +591,20 @@
     <script src="data-umkm.js"></script>
     <script>
         // ============================================================
+        // FUNGSI FORMAT RUPIAH
+        // ============================================================
+        function formatRupiah(num) {
+            return 'Rp' + num.toLocaleString('id-ID').replace(/,/g, '.');
+        }
+
+        // ============================================================
         // FUNGSI IKON FONT AWESOME
         // ============================================================
         function getIconByJenis(jenis) {
             const lower = jenis.toLowerCase();
             if (lower.includes('ayam')) return 'fa-drumstick-bite';
-            if (lower.includes('soto') || lower.includes('gado') || lower.includes('pecel') || lower.includes('lotek')) return 'fa-bowl-food';
+            if (lower.includes('soto') || lower.includes('gado') || lower.includes('pecel') || lower.includes('lotek'))
+                return 'fa-bowl-food';
             if (lower.includes('warung') || lower.includes('kedai') || lower.includes('nasi')) return 'fa-utensils';
             if (lower.includes('mie') || lower.includes('bakso')) return 'fa-utensils';
             if (lower.includes('angkringan')) return 'fa-mug-saucer';
@@ -561,7 +615,8 @@
             if (lower.includes('jamu')) return 'fa-leaf';
             if (lower.includes('krupuk') || lower.includes('rempeyek')) return 'fa-cookie';
             if (lower.includes('telur asin')) return 'fa-egg';
-            if (lower.includes('catering') || lower.includes('makanan kecil') || lower.includes('lauk')) return 'fa-bowl-food';
+            if (lower.includes('catering') || lower.includes('makanan kecil') || lower.includes('lauk'))
+                return 'fa-bowl-food';
             if (lower.includes('dagang') || lower.includes('jual') || lower.includes('toko') ||
                 lower.includes('sembako') || lower.includes('kelontong') || lower.includes('pulsa')) return 'fa-store';
             if (lower.includes('bengkel') || lower.includes('servis') || lower.includes('las') ||
@@ -578,19 +633,42 @@
             if (lower.includes('meubelair') || lower.includes('meubel')) return 'fa-chair';
             if (lower.includes('batu nisan') || lower.includes('beton')) return 'fa-mountain';
             if (lower.includes('depo pasir')) return 'fa-trowel';
-            if (lower.includes('pengepul') || lower.includes('rosokan') || lower.includes('barang bekas')) return 'fa-recycle';
+            if (lower.includes('pengepul') || lower.includes('rosokan') || lower.includes('barang bekas'))
+                return 'fa-recycle';
             return 'fa-store';
         }
 
         // ============================================================
-        // RENDER UMKM GRID
+        // RENDER STATISTIK - 3 KOLOM (jumlah, rata modal, rata omset)
+        // ============================================================
+        function renderStatistik() {
+            const totalUmkm = umkmData.length;
+            const totalModal = umkmData.reduce((sum, d) => sum + d.modal, 0);
+            const totalOmset = umkmData.reduce((sum, d) => sum + d.omset, 0);
+
+            const rataModal = totalModal / totalUmkm;
+            const rataOmset = totalOmset / totalUmkm;
+
+            const row = document.getElementById('statRow');
+            if (row) {
+                row.innerHTML = `
+                    <div class="stat-cell"><div class="v">${totalUmkm}</div><div class="u">UMKM Aktif (2025)</div></div>
+                    <div class="stat-cell"><div class="v">${formatRupiah(Math.round(rataModal))}</div><div class="u">Rata-rata Modal / UMKM</div></div>
+                    <div class="stat-cell"><div class="v">${formatRupiah(Math.round(rataOmset))}</div><div class="u">Rata-rata Omset / Tahun</div></div>
+                `;
+            }
+        }
+
+        // ============================================================
+        // RENDER UMKM GRID (dengan jangkauan)
         // ============================================================
         function renderUmkmGrid(filterRt) {
             const grid = document.getElementById('umkm-dynamic-grid');
             if (!grid) return;
             const items = umkmData.filter(d => filterRt === 'semua' || d.rt === filterRt);
             if (items.length === 0) {
-                grid.innerHTML = `<p style="grid-column:1/-1; text-align:center; color:var(--ink-soft); padding:40px 0;">Tidak ada data untuk RT ini.</p>`;
+                grid.innerHTML =
+                    `<p style="grid-column:1/-1; text-align:center; color:var(--ink-soft); padding:40px 0;">Tidak ada data untuk RT ini.</p>`;
                 return;
             }
             grid.innerHTML = items.map(d => {
@@ -600,6 +678,7 @@
                         <span class="icon-box"><i class="fa-solid ${iconClass}"></i></span>
                         <h3>${d.jenis}</h3>
                         <p class="owner">${d.nama}</p>
+                        <p class="jangkauan">${d.jangkauan || 'Lokal'}</p>
                         <span class="tk">${d.sektor}</span>
                         <span class="rt-badge">${d.rt}</span>
                     </div>
@@ -631,6 +710,7 @@
         // ============================================================
         // INISIALISASI
         // ============================================================
+        renderStatistik();
         renderUmkmGrid('semua');
         renderTopSektor();
 

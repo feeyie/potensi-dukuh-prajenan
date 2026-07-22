@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+grafik perbandingan, total penduduk baturan, kepala keluarga, laki-laki dan perempuan saja, tidak usah fullnya: <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8" />
@@ -27,8 +27,13 @@
             --line: rgba(32, 41, 29, 0.14);
             --radius: 22px;
         }
-        * { box-sizing: border-box; }
-        html { scroll-behavior: smooth; overflow-x: hidden; }
+        * {
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
         body {
             margin: 0;
             overflow-x: hidden;
@@ -41,20 +46,53 @@
             -webkit-font-smoothing: antialiased;
             padding-top: 85px;
         }
-        @media (max-width: 640px) { body { padding-top: 75px; } }
-        h1, h2, h3, .display { font-family: 'Fraunces', serif; font-weight: 560; letter-spacing: -0.01em; margin: 0; }
-        .mono { font-family: 'Poppins', sans-serif; letter-spacing: 0.04em; text-transform: uppercase; }
-        a { color: inherit; text-decoration: none; }
-        img { max-width: 100%; display: block; }
-        .wrap { max-width: 1120px; margin: 0 auto; padding: 0 32px; }
-        @media (max-width: 640px) { .wrap { padding: 0 20px; } }
+        @media (max-width: 640px) {
+            body {
+                padding-top: 75px;
+            }
+        }
+        h1, h2, h3, .display {
+            font-family: 'Fraunces', serif;
+            font-weight: 560;
+            letter-spacing: -0.01em;
+            margin: 0;
+        }
+        .mono {
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        .wrap {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+        @media (max-width: 640px) {
+            .wrap {
+                padding: 0 20px;
+            }
+        }
 
         /* ===== BACKGROUND SECTION ===== */
         .bg-paper { background: var(--paper); }
         .bg-paper-deep { background: var(--paper-deep); }
         .bg-white { background: var(--white); }
-        .bg-dark-green { background: var(--padi-deep); color: #F4EFDD; }
-        .bg-dark-blue { background: #1E3A42; color: #EAF3F0; }
+        .bg-dark-green {
+            background: var(--padi-deep);
+            color: #F4EFDD;
+        }
+        .bg-dark-blue {
+            background: #1E3A42;
+            color: #EAF3F0;
+        }
         .bg-dark-green .section-head .tag,
         .bg-dark-blue .section-head .tag { color: var(--gabah); }
         .bg-dark-green .section-head h2,
@@ -88,14 +126,49 @@
             justify-content: space-between;
             gap: 10px;
         }
-        @media (max-width: 640px) { .nav-inner { padding: 10px 10px 10px 18px; } }
-        .brand { display: flex; align-items: center; gap: 8px; text-decoration: none; color: inherit; }
-        .brand .leaf { color: var(--gabah); font-size: 1.1rem; }
-        .brand .mark { font-family: 'Fraunces', serif; font-weight: 650; font-size: 1.15rem; color: #FBF7E9; }
-        nav.links { display: flex; gap: 12px; font-size: 0.85rem; }
-        nav.links a { text-decoration: none; color: #C9D4C4; font-weight: 400; padding-bottom: 3px; border-bottom: 1px solid transparent; transition: color .2s; }
-        nav.links a:hover { color: var(--gabah); }
-        @media (max-width: 900px) { nav.links { display: none; } }
+        @media (max-width: 640px) {
+            .nav-inner {
+                padding: 10px 10px 10px 18px;
+            }
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: inherit;
+        }
+        .brand .leaf {
+            color: var(--gabah);
+            font-size: 1.1rem;
+        }
+        .brand .mark {
+            font-family: 'Fraunces', serif;
+            font-weight: 650;
+            font-size: 1.15rem;
+            color: #FBF7E9;
+        }
+        nav.links {
+            display: flex;
+            gap: 12px;
+            font-size: 0.85rem;
+        }
+        nav.links a {
+            text-decoration: none;
+            color: #C9D4C4;
+            font-weight: 400;
+            padding-bottom: 3px;
+            border-bottom: 1px solid transparent;
+            transition: color .2s;
+        }
+        nav.links a:hover {
+            color: var(--gabah);
+        }
+        @media (max-width: 900px) {
+            nav.links {
+                display: none;
+            }
+        }
         .nav-cta {
             background: var(--gabah);
             color: var(--forest);
@@ -107,10 +180,15 @@
             white-space: nowrap;
             transition: transform .2s;
         }
-        .nav-cta:hover { transform: translateY(-1px); }
+        .nav-cta:hover {
+            transform: translateY(-1px);
+        }
 
         /* ===== HERO ===== */
-        .hero-wrap { padding: 20px 20px 0; margin-top: 0; }
+        .hero-wrap {
+            padding: 20px 20px 0;
+            margin-top: 0;
+        }
         .hero {
             position: relative;
             max-width: 1120px;
@@ -120,9 +198,25 @@
             color: #F4EFDD;
             min-height: 640px;
         }
-        @media (max-width: 860px) { .hero { min-height: auto; border-radius: 24px; } }
-        @media (max-width: 480px) { .hero-wrap { padding: 14px 14px 0; } .hero { border-radius: 18px; } }
-        .hero-bg { position: absolute; inset: 0; z-index: 0; }
+        @media (max-width: 860px) {
+            .hero {
+                min-height: auto;
+                border-radius: 24px;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero-wrap {
+                padding: 14px 14px 0;
+            }
+            .hero {
+                border-radius: 18px;
+            }
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
         .hero-overlay {
             position: absolute;
             inset: 0;
@@ -140,8 +234,16 @@
             align-items: end;
             min-height: 640px;
         }
-        @media (max-width: 860px) { .hero-inner { grid-template-columns: 1fr; padding: 44px 24px 40px; min-height: auto; } }
-        .hero-copy { align-self: center; }
+        @media (max-width: 860px) {
+            .hero-inner {
+                grid-template-columns: 1fr;
+                padding: 44px 24px 40px;
+                min-height: auto;
+            }
+        }
+        .hero-copy {
+            align-self: center;
+        }
         .eyebrow {
             font-size: 0.78rem;
             letter-spacing: 0.08em;
@@ -153,9 +255,23 @@
             gap: 10px;
             margin-bottom: 18px;
         }
-        .hero h1 { font-size: clamp(2.2rem, 5.4vw, 3.8rem); line-height: 1.05; color: #FBF7E9; }
-        .hero h1 em { font-style: italic; font-weight: 300; color: var(--gabah); }
-        .hero p.lede { max-width: 440px; margin-top: 20px; font-size: 1rem; color: #DCE6C6; font-weight: 300; }
+        .hero h1 {
+            font-size: clamp(2.2rem, 5.4vw, 3.8rem);
+            line-height: 1.05;
+            color: #FBF7E9;
+        }
+        .hero h1 em {
+            font-style: italic;
+            font-weight: 300;
+            color: var(--gabah);
+        }
+        .hero p.lede {
+            max-width: 440px;
+            margin-top: 20px;
+            font-size: 1rem;
+            color: #DCE6C6;
+            font-weight: 300;
+        }
         .hero-btn {
             display: inline-block;
             margin-top: 30px;
@@ -168,10 +284,24 @@
             border-radius: 999px;
             transition: transform .2s;
         }
-        .hero-btn:hover { transform: translateY(-2px); }
-        .hero-cards { display: flex; flex-direction: column; gap: 14px; align-self: end; }
-        .float-row { display: flex; gap: 14px; }
-        @media (max-width: 380px) { .float-row { flex-direction: column; } }
+        .hero-btn:hover {
+            transform: translateY(-2px);
+        }
+        .hero-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            align-self: end;
+        }
+        .float-row {
+            display: flex;
+            gap: 14px;
+        }
+        @media (max-width: 380px) {
+            .float-row {
+                flex-direction: column;
+            }
+        }
         .float-card {
             flex: 1;
             background: rgba(20, 32, 23, 0.55);
@@ -180,8 +310,17 @@
             border-radius: 18px;
             padding: 18px 20px;
         }
-        .float-card .n { font-family: 'Fraunces', serif; font-weight: 650; font-size: 1.9rem; color: #FBF7E9; }
-        .float-card .l { font-size: 0.76rem; color: #C6D2A9; margin-top: 4px; }
+        .float-card .n {
+            font-family: 'Fraunces', serif;
+            font-weight: 650;
+            font-size: 1.9rem;
+            color: #FBF7E9;
+        }
+        .float-card .l {
+            font-size: 0.76rem;
+            color: #C6D2A9;
+            margin-top: 4px;
+        }
         .float-people {
             background: rgba(20, 32, 23, 0.55);
             backdrop-filter: blur(10px);
@@ -192,7 +331,9 @@
             align-items: center;
             gap: 14px;
         }
-        .avatars { display: flex; }
+        .avatars {
+            display: flex;
+        }
         .avatars span {
             width: 32px;
             height: 32px;
@@ -206,15 +347,38 @@
             color: #fff;
             margin-left: -10px;
         }
-        .avatars span:first-child { margin-left: 0; }
-        .avatars .plus { background: var(--gabah); color: var(--forest); font-weight: 600; }
-        .float-people .txt .n { font-family: 'Fraunces', serif; font-weight: 650; font-size: 1.1rem; color: #FBF7E9; }
-        .float-people .txt .l { font-size: 0.74rem; color: #C6D2A9; }
+        .avatars span:first-child {
+            margin-left: 0;
+        }
+        .avatars .plus {
+            background: var(--gabah);
+            color: var(--forest);
+            font-weight: 600;
+        }
+        .float-people .txt .n {
+            font-family: 'Fraunces', serif;
+            font-weight: 650;
+            font-size: 1.1rem;
+            color: #FBF7E9;
+        }
+        .float-people .txt .l {
+            font-size: 0.74rem;
+            color: #C6D2A9;
+        }
 
         /* ===== SECTION GENERIC ===== */
-        section { padding: 96px 0; }
-        @media (max-width: 640px) { section { padding: 64px 0; } }
-        .section-head { max-width: 640px; margin-bottom: 52px; }
+        section {
+            padding: 80px 0;
+        }
+        @media (max-width: 640px) {
+            section {
+                padding: 56px 0;
+            }
+        }
+        .section-head {
+            max-width: 640px;
+            margin-bottom: 44px;
+        }
         .section-head .tag {
             font-size: 0.78rem;
             font-weight: 500;
@@ -224,8 +388,16 @@
             margin-bottom: 14px;
             display: block;
         }
-        .section-head h2 { font-size: clamp(1.9rem, 4vw, 2.7rem); color: var(--padi-deep); }
-        .section-head p { color: var(--ink-soft); margin-top: 14px; font-size: 1.02rem; font-weight: 300; }
+        .section-head h2 {
+            font-size: clamp(1.9rem, 4vw, 2.7rem);
+            color: var(--padi-deep);
+        }
+        .section-head p {
+            color: var(--ink-soft);
+            margin-top: 14px;
+            font-size: 1.02rem;
+            font-weight: 300;
+        }
 
         /* ===== CONTOUR ===== */
         hr.contour-paper,
@@ -238,14 +410,32 @@
             background-position: top;
             background-size: 30px 16px;
         }
-        hr.contour-paper { background-image: radial-gradient(circle at 50% -6px, transparent 9px, var(--paper) 10px); }
-        hr.contour-paper-deep { background-image: radial-gradient(circle at 50% -6px, transparent 9px, var(--paper-deep) 10px); }
-        hr.contour-dark-green { background-image: radial-gradient(circle at 50% -6px, transparent 9px, var(--padi-deep) 10px); }
+        hr.contour-paper {
+            background-image: radial-gradient(circle at 50% -6px, transparent 9px, var(--paper) 10px);
+        }
+        hr.contour-paper-deep {
+            background-image: radial-gradient(circle at 50% -6px, transparent 9px, var(--paper-deep) 10px);
+        }
+        hr.contour-dark-green {
+            background-image: radial-gradient(circle at 50% -6px, transparent 9px, var(--padi-deep) 10px);
+        }
 
         /* ===== SEJARAH ===== */
-        .sejarah-grid { display: grid; grid-template-columns: 0.9fr 1.4fr; gap: 64px; }
-        @media (max-width: 860px) { .sejarah-grid { grid-template-columns: 1fr; gap: 40px; } }
-        .sejarah-copy p { margin: 0 0 16px; color: var(--ink); }
+        .sejarah-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.4fr;
+            gap: 64px;
+        }
+        @media (max-width: 860px) {
+            .sejarah-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+        .sejarah-copy p {
+            margin: 0 0 16px;
+            color: var(--ink);
+        }
         .sejarah-copy p:first-child::first-letter {
             font-family: 'Fraunces', serif;
             font-weight: 650;
@@ -263,7 +453,9 @@
             flex-direction: column;
             gap: 34px;
         }
-        .tl-item { position: relative; }
+        .tl-item {
+            position: relative;
+        }
         .tl-item::before {
             content: "";
             position: absolute;
@@ -276,13 +468,37 @@
             border: 2px solid var(--paper);
             box-shadow: 0 0 0 1px var(--soil);
         }
-        .tl-item .yr { font-family: 'Poppins', sans-serif; font-size: 0.72rem; color: var(--soil); letter-spacing: 0.06em; }
-        .tl-item h3 { font-size: 1.15rem; margin-top: 4px; color: var(--ink); font-weight: 560; }
-        .tl-item p { margin: 6px 0 0; font-size: 0.94rem; color: var(--ink-soft); }
+        .tl-item .yr {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.72rem;
+            color: var(--soil);
+            letter-spacing: 0.06em;
+        }
+        .tl-item h3 {
+            font-size: 1.15rem;
+            margin-top: 4px;
+            color: var(--ink);
+            font-weight: 560;
+        }
+        .tl-item p {
+            margin: 6px 0 0;
+            font-size: 0.94rem;
+            color: var(--ink-soft);
+        }
 
         /* ===== VISI MISI ===== */
-        .visi-misi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: stretch; }
-        @media (max-width: 860px) { .visi-misi-grid { grid-template-columns: 1fr; gap: 30px; } }
+        .visi-misi-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: stretch;
+        }
+        @media (max-width: 860px) {
+            .visi-misi-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
         .visi-misi-grid .card-visi {
             background: var(--padi-deep);
             border: 1px solid var(--padi-deep);
@@ -292,8 +508,16 @@
             flex-direction: column;
             height: 100%;
         }
-        .visi-misi-grid .card-visi h3 { color: #FBF7E9; font-size: 1.5rem; margin: 14px 0 18px; line-height: 1.3; }
-        .visi-misi-grid .card-visi h3 em { font-style: italic; color: var(--gabah); }
+        .visi-misi-grid .card-visi h3 {
+            color: #FBF7E9;
+            font-size: 1.5rem;
+            margin: 14px 0 18px;
+            line-height: 1.3;
+        }
+        .visi-misi-grid .card-visi h3 em {
+            font-style: italic;
+            color: var(--gabah);
+        }
         .visi-misi-grid .card-misi {
             background: var(--paper);
             border: 1px solid var(--line);
@@ -311,21 +535,94 @@
             flex: 1;
             align-content: start;
         }
-        @media (max-width: 640px) { .visi-misi-grid .misi-grid { grid-template-columns: 1fr; } }
-        .visi-misi-grid .misi-item { display: flex; gap: 8px; align-items: flex-start; padding: 4px 0; }
-        .visi-misi-grid .misi-item .num { font-weight: 600; color: var(--gabah); font-size: 0.85rem; min-width: 28px; }
-        .visi-misi-grid .misi-item p { margin: 0; font-size: 0.85rem; color: var(--ink); line-height: 1.5; }
+        @media (max-width: 640px) {
+            .visi-misi-grid .misi-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .visi-misi-grid .misi-item {
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+            padding: 4px 0;
+        }
+        .visi-misi-grid .misi-item .num {
+            font-weight: 600;
+            color: var(--gabah);
+            font-size: 0.85rem;
+            min-width: 28px;
+        }
+        .visi-misi-grid .misi-item p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: var(--ink);
+            line-height: 1.5;
+        }
 
         /* ===== LOKASI ===== */
-        .lokasi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
-        @media (max-width: 860px) { .lokasi-grid { grid-template-columns: 1fr; gap: 36px; } }
-        .peta-box { border: 1px solid var(--line); background: var(--paper); padding: 24px; border-radius: var(--radius); }
-        .peta-box img { width: 100%; height: auto; border-radius: 12px; display: block; }
-        .koor { display: flex; justify-content: space-between; font-family: 'Poppins', sans-serif; font-size: 0.7rem; color: var(--ink-soft); margin-bottom: 14px; letter-spacing: 0.04em; }
-        .jarak-list { list-style: none; margin: 24px 0 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
-        .jarak-list li { display: flex; justify-content: space-between; font-size: 0.92rem; padding-bottom: 10px; border-bottom: 1px dashed var(--line); }
-        .jarak-list li span:last-child { font-family: 'Poppins', sans-serif; font-size: 0.82rem; color: var(--tirta); }
-        .note { background: rgba(173, 94, 44, 0.08); border: 1px dashed var(--soil); padding: 14px 18px; font-size: 0.82rem; color: var(--ink-soft); margin-top: 14px; font-family: 'Poppins', sans-serif; line-height: 1.6; }
+        .lokasi-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        @media (max-width: 860px) {
+            .lokasi-grid {
+                grid-template-columns: 1fr;
+                gap: 36px;
+            }
+        }
+        .peta-box {
+            border: 1px solid var(--line);
+            background: var(--paper);
+            padding: 24px;
+            border-radius: var(--radius);
+        }
+        .peta-box img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            display: block;
+        }
+        .koor {
+            display: flex;
+            justify-content: space-between;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.7rem;
+            color: var(--ink-soft);
+            margin-bottom: 14px;
+            letter-spacing: 0.04em;
+        }
+        .jarak-list {
+            list-style: none;
+            margin: 24px 0 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .jarak-list li {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.92rem;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed var(--line);
+        }
+        .jarak-list li span:last-child {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.82rem;
+            color: var(--tirta);
+        }
+        .note {
+            background: rgba(173, 94, 44, 0.08);
+            border: 1px dashed var(--soil);
+            padding: 14px 18px;
+            font-size: 0.82rem;
+            color: var(--ink-soft);
+            margin-top: 14px;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+        }
         .btn-maps {
             display: inline-flex;
             align-items: center;
@@ -343,11 +640,21 @@
             margin-top: 14px;
             box-shadow: 0 2px 8px rgba(66, 133, 244, 0.3);
         }
-        .btn-maps:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(66, 133, 244, 0.4); }
-        .btn-maps i { font-size: 1.1rem; }
+        .btn-maps:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(66, 133, 244, 0.4);
+        }
+        .btn-maps i {
+            font-size: 1.1rem;
+        }
 
         /* ===== FASILITAS ===== */
-        .fasilitas-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 12px; }
+        .fasilitas-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 12px;
+        }
         .fasilitas-card-kecil {
             background: var(--paper);
             border-radius: 12px;
@@ -361,9 +668,29 @@
             gap: 0;
             height: 64px;
         }
-        .fasilitas-card-kecil:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); }
-        .fasilitas-card-kecil img { width: 64px; height: 64px; object-fit: cover; display: block; flex-shrink: 0; }
-        .fasilitas-card-kecil .label { font-size: 0.7rem; font-weight: 500; padding: 0 12px; color: var(--ink); letter-spacing: 0.02em; flex: 1; line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .fasilitas-card-kecil:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        }
+        .fasilitas-card-kecil img {
+            width: 64px;
+            height: 64px;
+            object-fit: cover;
+            display: block;
+            flex-shrink: 0;
+        }
+        .fasilitas-card-kecil .label {
+            font-size: 0.7rem;
+            font-weight: 500;
+            padding: 0 12px;
+            color: var(--ink);
+            letter-spacing: 0.02em;
+            flex: 1;
+            line-height: 1.3;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
 
         /* ===== LIGHTBOX ===== */
         .lightbox-overlay {
@@ -377,27 +704,95 @@
             padding: 30px;
             backdrop-filter: blur(6px);
         }
-        .lightbox-overlay.active { display: flex; }
-        .lightbox-overlay img { max-width: 90vw; max-height: 85vh; border-radius: 16px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6); object-fit: contain; }
-        .lightbox-overlay .close-btn { position: absolute; top: 24px; right: 32px; font-size: 2.4rem; color: #fff; cursor: pointer; background: none; border: none; font-weight: 300; transition: transform 0.2s; }
-        .lightbox-overlay .close-btn:hover { transform: scale(1.1); }
+        .lightbox-overlay.active {
+            display: flex;
+        }
+        .lightbox-overlay img {
+            max-width: 90vw;
+            max-height: 85vh;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+            object-fit: contain;
+        }
+        .lightbox-overlay .close-btn {
+            position: absolute;
+            top: 24px;
+            right: 32px;
+            font-size: 2.4rem;
+            color: #fff;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-weight: 300;
+            transition: transform 0.2s;
+        }
+        .lightbox-overlay .close-btn:hover {
+            transform: scale(1.1);
+        }
         @media (max-width: 640px) {
-            .fasilitas-grid { grid-template-columns: 1fr; gap: 8px; }
-            .fasilitas-card-kecil { height: 56px; }
-            .fasilitas-card-kecil img { width: 56px; height: 56px; }
-            .fasilitas-card-kecil .label { font-size: 0.6rem; padding: 0 10px; white-space: normal; }
+            .fasilitas-grid {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+            .fasilitas-card-kecil {
+                height: 56px;
+            }
+            .fasilitas-card-kecil img {
+                width: 56px;
+                height: 56px;
+            }
+            .fasilitas-card-kecil .label {
+                font-size: 0.6rem;
+                padding: 0 10px;
+                white-space: normal;
+            }
         }
 
         /* ===== POTENSI ===== */
-        .highlight-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-bottom: 48px; }
-        @media (max-width: 780px) { .highlight-row { grid-template-columns: 1fr; } }
-        .highlight-card { padding: 32px 26px; border-radius: var(--radius); }
-        .highlight-card .hc-ic { width: 36px; height: 36px; margin-bottom: 16px; }
-        .highlight-card h3 { font-size: 1.3rem; color: var(--padi-deep); margin-bottom: 8px; }
-        .highlight-card p { margin: 0; font-size: 0.92rem; color: var(--ink); font-weight: 500; }
-        .pola-tanam { margin-bottom: 48px; }
-        .pola-track { margin-top: 16px; border: 1px solid var(--line); padding: 4px; background: var(--paper-deep); }
-        .pola-bar { display: flex; height: 56px; }
+        .highlight-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-bottom: 48px;
+        }
+        @media (max-width: 780px) {
+            .highlight-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        .highlight-card {
+            padding: 32px 26px;
+            border-radius: var(--radius);
+        }
+        .highlight-card .hc-ic {
+            width: 36px;
+            height: 36px;
+            margin-bottom: 16px;
+        }
+        .highlight-card h3 {
+            font-size: 1.3rem;
+            color: var(--padi-deep);
+            margin-bottom: 8px;
+        }
+        .highlight-card p {
+            margin: 0;
+            font-size: 0.92rem;
+            color: var(--ink);
+            font-weight: 500;
+        }
+        .pola-tanam {
+            margin-bottom: 48px;
+        }
+        .pola-track {
+            margin-top: 16px;
+            border: 1px solid var(--line);
+            padding: 4px;
+            background: var(--paper-deep);
+        }
+        .pola-bar {
+            display: flex;
+            height: 56px;
+        }
         .pola-seg {
             display: flex;
             align-items: center;
@@ -411,10 +806,25 @@
             color: #fff;
             line-height: 1.3;
         }
-        .pola-padi { background: var(--padi); }
-        .pola-jagung { background: var(--gabah); color: #4A3A0E; }
-        .pola-panen { background: var(--soil); }
-        @media (max-width: 640px) { .pola-bar { flex-direction: column; height: auto; } .pola-seg { padding: 12px 8px; } }
+        .pola-padi {
+            background: var(--padi);
+        }
+        .pola-jagung {
+            background: var(--gabah);
+            color: #4A3A0E;
+        }
+        .pola-panen {
+            background: var(--soil);
+        }
+        @media (max-width: 640px) {
+            .pola-bar {
+                flex-direction: column;
+                height: auto;
+            }
+            .pola-seg {
+                padding: 12px 8px;
+            }
+        }
         .inovasi-block {
             display: grid;
             grid-template-columns: 0.9fr 1.3fr;
@@ -425,7 +835,12 @@
             padding: 36px;
             border-radius: var(--radius);
         }
-        @media (max-width: 780px) { .inovasi-block { grid-template-columns: 1fr; gap: 24px; } }
+        @media (max-width: 780px) {
+            .inovasi-block {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+        }
 
         /* ===== KEGIATAN ===== */
         .kegiatan-grid {
@@ -435,8 +850,16 @@
             background: var(--line);
             border: 1px solid var(--line);
         }
-        @media (max-width: 860px) { .kegiatan-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 560px) { .kegiatan-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 860px) {
+            .kegiatan-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 560px) {
+            .kegiatan-grid {
+                grid-template-columns: 1fr;
+            }
+        }
         .keg-cell {
             background: var(--paper);
             padding: 22px 26px 30px;
@@ -458,11 +881,32 @@
             margin-bottom: 16px;
             overflow: hidden;
         }
-        .keg-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .keg-photo .placeholder-icon { width: 34px; height: 34px; }
-        .keg-cell .hari { font-family: 'Poppins', sans-serif; font-size: 0.66rem; color: var(--tirta); text-transform: uppercase; letter-spacing: 0.06em; }
-        .keg-cell h3 { font-size: 1.1rem; margin: 10px 0 8px; }
-        .keg-cell p { font-size: 0.88rem; color: var(--ink-soft); margin: 0; }
+        .keg-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .keg-photo .placeholder-icon {
+            width: 34px;
+            height: 34px;
+        }
+        .keg-cell .hari {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.66rem;
+            color: var(--tirta);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+        .keg-cell h3 {
+            font-size: 1.1rem;
+            margin: 10px 0 8px;
+        }
+        .keg-cell p {
+            font-size: 0.88rem;
+            color: var(--ink-soft);
+            margin: 0;
+        }
         .keg-tag {
             display: inline-block;
             font-family: 'Poppins', sans-serif;
@@ -474,10 +918,21 @@
             margin-bottom: 10px;
             color: #fff;
         }
-        .tag-hijau { background: var(--padi); }
-        .tag-biru { background: var(--tirta); }
-        .tag-oranye { background: var(--soil); }
-        .filter-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 36px; }
+        .tag-hijau {
+            background: var(--padi);
+        }
+        .tag-biru {
+            background: var(--tirta);
+        }
+        .tag-oranye {
+            background: var(--soil);
+        }
+        .filter-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 36px;
+        }
         .filter-btn {
             font-family: 'Poppins', sans-serif;
             font-size: 0.82rem;
@@ -490,14 +945,45 @@
             cursor: pointer;
             transition: all .2s;
         }
-        .filter-btn:hover { border-color: var(--padi-deep); color: var(--padi-deep); }
-        .filter-btn.active { background: var(--padi-deep); border-color: var(--padi-deep); color: #FBF7E9; }
-        .jadwal-box { margin-top: 48px; border: 1px solid var(--line); padding: 28px; background: var(--paper-deep); border-radius: var(--radius); }
-        .jadwal-table { width: 100%; border-collapse: collapse; margin-top: 16px; }
-        .jadwal-table td { padding: 12px 6px; font-size: 0.9rem; border-bottom: 1px dashed var(--line); }
-        .jadwal-table tr:last-child td { border-bottom: none; }
-        .jadwal-table td:first-child { color: var(--ink); font-weight: 500; }
-        .jadwal-table td:last-child { color: var(--tirta); font-family: 'Poppins', sans-serif; font-size: 0.82rem; text-align: right; }
+        .filter-btn:hover {
+            border-color: var(--padi-deep);
+            color: var(--padi-deep);
+        }
+        .filter-btn.active {
+            background: var(--padi-deep);
+            border-color: var(--padi-deep);
+            color: #FBF7E9;
+        }
+        .jadwal-box {
+            margin-top: 48px;
+            border: 1px solid var(--line);
+            padding: 28px;
+            background: var(--paper-deep);
+            border-radius: var(--radius);
+        }
+        .jadwal-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+        }
+        .jadwal-table td {
+            padding: 12px 6px;
+            font-size: 0.9rem;
+            border-bottom: 1px dashed var(--line);
+        }
+        .jadwal-table tr:last-child td {
+            border-bottom: none;
+        }
+        .jadwal-table td:first-child {
+            color: var(--ink);
+            font-weight: 500;
+        }
+        .jadwal-table td:last-child {
+            color: var(--tirta);
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.82rem;
+            text-align: right;
+        }
 
         /* ===== UMKM ===== */
         .stat-row-mini {
@@ -508,17 +994,36 @@
             border: 1px solid var(--line);
             margin-bottom: 36px;
         }
-        @media (max-width: 780px) { .stat-row-mini { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 480px) { .stat-row-mini { grid-template-columns: 1fr; } }
+        @media (max-width: 780px) {
+            .stat-row-mini {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 480px) {
+            .stat-row-mini {
+                grid-template-columns: 1fr;
+            }
+        }
         .stat-cell-mini {
             background: var(--paper);
             padding: 30px 24px;
             border-radius: 14px;
             text-align: center;
         }
-        .stat-cell-mini .v { font-family: 'Fraunces', serif; font-weight: 560; font-size: 2.1rem; color: var(--padi-deep); }
-        .stat-cell-mini .u { font-family: 'Poppins', sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--ink-soft); margin-top: 6px; }
-
+        .stat-cell-mini .v {
+            font-family: 'Fraunces', serif;
+            font-weight: 560;
+            font-size: 2.1rem;
+            color: var(--padi-deep);
+        }
+        .stat-cell-mini .u {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+            color: var(--ink-soft);
+            margin-top: 6px;
+        }
         .top5-box-mini {
             background: rgba(217, 164, 65, 0.12);
             border: 1px solid rgba(217, 164, 65, 0.25);
@@ -526,7 +1031,12 @@
             padding: 26px 28px;
             margin-bottom: 16px;
         }
-        .top5-list-mini { margin-top: 16px; display: flex; flex-direction: column; gap: 2px; }
+        .top5-list-mini {
+            margin-top: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
         .top5-item-mini {
             display: flex;
             align-items: center;
@@ -534,7 +1044,9 @@
             padding: 12px 6px;
             border-bottom: 1px dashed var(--line);
         }
-        .top5-item-mini:last-child { border-bottom: none; }
+        .top5-item-mini:last-child {
+            border-bottom: none;
+        }
         .top5-item-mini .rank {
             width: 26px;
             height: 26px;
@@ -548,9 +1060,17 @@
             font-weight: 600;
             flex-shrink: 0;
         }
-        .top5-item-mini .name { flex: 1; color: var(--ink); font-size: 0.92rem; }
-        .top5-item-mini .omset { color: var(--soil); font-weight: 600; font-size: 0.92rem; white-space: nowrap; }
-
+        .top5-item-mini .name {
+            flex: 1;
+            color: var(--ink);
+            font-size: 0.92rem;
+        }
+        .top5-item-mini .omset {
+            color: var(--soil);
+            font-weight: 600;
+            font-size: 0.92rem;
+            white-space: nowrap;
+        }
         .btn-detail {
             display: inline-block;
             background: var(--gabah);
@@ -565,57 +1085,261 @@
             font-family: 'Poppins', sans-serif;
             text-decoration: none;
         }
-        .btn-detail:hover { transform: translateY(-2px); }
+        .btn-detail:hover {
+            transform: translateY(-2px);
+        }
 
-        /* ===== DEMOGRAFI ===== */
-        .demo-stat-mini-row {
+        /* ===== DEMOGRAFI (di index) ===== */
+        .demo-section {
+            background: var(--paper-deep);
+            padding: 80px 0;
+        }
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.8fr;
+            gap: 30px;
+            align-items: stretch;
+            margin-bottom: 48px;
+        }
+        @media (max-width: 780px) {
+            .comparison-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+        .comparison-grid .foto-wrapper {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            border: 1px solid var(--line);
+            background: var(--paper);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .comparison-grid .foto-wrapper img {
+            width: 100%;
+            height: 100%;
+            min-height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+        .chart-box-dark {
+            background: #1E3A42;
+            border: 1px solid rgba(234, 243, 240, 0.2);
+            border-radius: var(--radius);
+            padding: 28px 24px 24px;
+            color: #EAF3F0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .chart-box-dark .mono {
+            color: var(--soil);
+            font-size: 0.7rem;
+        }
+        .bar-chart-compare {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 40px;
+            height: 200px;
+            padding: 0 10px;
+            border-bottom: 2px solid rgba(234, 243, 240, 0.3);
+            position: relative;
+            margin-top: 12px;
+        }
+        .bar-item-compare {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            flex: 0 0 130px;
+            height: 100%;
+            position: relative;
+        }
+        .bar-item-compare .bar {
+            width: 100%;
+            max-width: 80px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding-top: 12px;
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #fff;
+            transition: height 1s ease;
+            position: relative;
+            min-height: 36px;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+        }
+        .bar-item-compare .bar.b-desa {
+            background: linear-gradient(180deg, #4A7C3A, var(--padi-deep));
+        }
+        .bar-item-compare .bar.b-prajenan {
+            background: linear-gradient(180deg, var(--gabah), var(--soil));
+        }
+        .bar-item-compare .bar .label-count {
+            position: absolute;
+            top: -28px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #EAF3F0;
+            background: rgba(0,0,0,0.4);
+            padding: 2px 10px;
+            border-radius: 999px;
+            border: 1px solid rgba(234,243,240,0.2);
+            white-space: nowrap;
+        }
+        .bar-item-compare .bar-label {
+            margin-top: 16px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: #EAF3F0;
+            text-align: center;
+            line-height: 1.4;
+        }
+        .bar-item-compare .bar-label .sub {
+            font-size: 0.58rem;
+            font-weight: 300;
+            color: #C6D2A9;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            display: block;
+            margin-top: 2px;
+        }
+        .chart-legend {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 16px;
+            font-size: 0.78rem;
+            color: #C6D2A9;
+        }
+        .chart-legend span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .chart-legend .dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+        .dot-desa { background: var(--padi-deep); }
+        .dot-prajenan { background: var(--soil); }
+        .chart-note {
+            text-align: center;
+            font-size: 0.7rem;
+            margin-top: 12px;
+            padding: 10px 16px;
+            background: rgba(234, 243, 240, 0.06);
+            border: 1px solid rgba(234, 243, 240, 0.1);
+            border-radius: 999px;
+            display: inline-block;
+            color: #B9CFCA;
+        }
+
+        /* ===== STAT GRID 4 KOLOM (index) ===== */
+        .stat-grid-4 {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 1px;
-            background: rgba(0,0,0,0.04);
+            gap: 20px;
+            margin-bottom: 48px;
+        }
+        @media (max-width: 780px) {
+            .stat-grid-4 { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 480px) {
+            .stat-grid-4 { grid-template-columns: 1fr; }
+        }
+        .stat-card {
+            background: var(--white);
             border: 1px solid var(--line);
-            margin-bottom: 36px;
+            border-radius: var(--radius);
+            padding: 24px 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+            text-align: center;
+            transition: transform 0.2s;
         }
-        @media (max-width: 780px) { .demo-stat-mini-row { grid-template-columns: repeat(2, 1fr); } }
-        .demo-stat-mini {
-            background: transparent;
-            padding: 34px 24px;
-            border-radius: 14px;
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
         }
-        .demo-stat-mini .v { font-family: 'Fraunces', serif; font-weight: 650; font-size: 2.3rem; color: var(--padi-deep); }
-        .demo-stat-mini .u { font-family: 'Poppins', sans-serif; font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-soft); margin-top: 8px; }
-        .btn-detail-light {
-            display: inline-block;
-            background: var(--gabah);
-            color: #33291D;
-            font-weight: 500;
-            font-size: 0.88rem;
-            padding: 14px 32px;
-            border-radius: 999px;
-            transition: transform .2s;
-            border: none;
-            cursor: pointer;
-            font-family: 'Poppins', sans-serif;
-            text-decoration: none;
+        .stat-card .icon-big {
+            font-size: 2rem;
+            color: var(--gabah);
+            margin-bottom: 8px;
         }
-        .btn-detail-light:hover { transform: translateY(-2px); }
+        .stat-card .angka {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 650;
+            color: var(--padi-deep);
+            line-height: 1.2;
+        }
+        .stat-card .label {
+            font-size: 0.72rem;
+            color: var(--ink-soft);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 4px;
+        }
+
+        .demo-table-box {
+            background: rgba(32, 41, 29, 0.03);
+            border: 1px solid var(--line);
+            padding: 24px 28px;
+            margin-bottom: 32px;
+            border-radius: var(--radius);
+        }
+        .demo-table-box .mono {
+            color: var(--soil);
+            font-size: 0.68rem;
+        }
 
         /* ===== FOOTER ===== */
-        footer { padding: 70px 0 40px; border-top: 1px solid var(--line); }
+        footer {
+            padding: 70px 0 40px;
+            border-top: 1px solid var(--line);
+        }
         footer.bg-dark-green {
             background: var(--padi-deep);
             color: #F4EFDD;
             border-top: none;
         }
-        footer.bg-dark-green h4 { color: var(--gabah); }
+        footer.bg-dark-green h4 {
+            color: var(--gabah);
+        }
         footer.bg-dark-green p,
         footer.bg-dark-green li,
-        footer.bg-dark-green .foot-bottom { color: #C6D2A9; }
-        footer.bg-dark-green .foot-bottom { border-top-color: rgba(255,255,255,0.15); }
-        footer.bg-dark-green a { color: #F4EFDD; }
-        footer.bg-dark-green a:hover { color: var(--gabah); }
-        .foot-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 40px; }
-        @media (max-width: 700px) { .foot-grid { grid-template-columns: 1fr; gap: 32px; } }
+        footer.bg-dark-green .foot-bottom {
+            color: #C6D2A9;
+        }
+        footer.bg-dark-green .foot-bottom {
+            border-top-color: rgba(255,255,255,0.15);
+        }
+        footer.bg-dark-green a {
+            color: #F4EFDD;
+        }
+        footer.bg-dark-green a:hover {
+            color: var(--gabah);
+        }
+        .foot-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr 1fr;
+            gap: 40px;
+        }
+        @media (max-width: 700px) {
+            .foot-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+        }
         footer h4 {
             font-family: 'Poppins', sans-serif;
             font-size: 0.66rem;
@@ -624,8 +1348,19 @@
             color: var(--soil);
             margin-bottom: 14px;
         }
-        footer p, footer li { color: var(--ink-soft); font-size: 0.9rem; }
-        footer ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+        footer p,
+        footer li {
+            color: var(--ink-soft);
+            font-size: 0.9rem;
+        }
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
         .foot-bottom {
             margin-top: 56px;
             padding-top: 20px;
@@ -640,8 +1375,15 @@
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
-        .fade-in { opacity: 0; transform: translateY(14px); transition: opacity .7s ease, transform .7s ease; }
-        .fade-in.in { opacity: 1; transform: translateY(0); }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(14px);
+            transition: opacity .7s ease, transform .7s ease;
+        }
+        .fade-in.in {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body>
@@ -656,13 +1398,13 @@
                 </a>
                 <nav class="links">
                     <a href="index.html">Beranda</a>
-                    <a href="index.html#sejarah">Sejarah</a>
-                    <a href="index.html#visi-misi">Visi &amp; Misi</a>
-                    <a href="index.html#lokasi">Lokasi</a>
-                    <a href="index.html#potensi">Potensi</a>
-                    <a href="index.html#umkm">UMKM</a>
-                    <a href="index.html#kegiatan">Kegiatan</a>
-                    <a href="index.html#demografi">Demografi</a>
+                    <a href="#sejarah">Sejarah</a>
+                    <a href="#visi-misi">Visi &amp; Misi</a>
+                    <a href="#lokasi">Lokasi</a>
+                    <a href="#potensi">Potensi</a>
+                    <a href="#umkm">UMKM</a>
+                    <a href="#kegiatan">Kegiatan</a>
+                    <a href="#demografi-index">Demografi</a>
                 </nav>
                 <a href="kkn.html" class="nav-cta">Tim KKN</a>
             </div>
@@ -680,7 +1422,7 @@
                 <div class="hero-copy">
                     <span class="eyebrow">Dukuh Prajenan · Desa Baturan, Kec. Gantiwarno, Kab. Klaten, Jawa Tengah</span>
                     <h1>Mengenal<br>Dukuh <em>Prajenan</em></h1>
-                    <p class="lede">Salah satu dari empat pedukuhan utama Desa Baturan. Dijaga oleh hamparan sawah, irigasi turun-temurun, dan semangat gotong royong.</p>
+                    <p class="lede">Salah satu dari tiga pedukuhan utama Desa Baturan. Dijaga oleh hamparan sawah, irigasi turun-temurun, dan semangat gotong royong.</p>
                     <a href="#sejarah" class="hero-btn">Jelajahi Dukuh</a>
                 </div>
                 <div class="hero-cards">
@@ -708,15 +1450,15 @@
             <div class="section-head">
                 <span class="tag">Asal-usul</span>
                 <h2>Sejarah Singkat</h2>
-                <p>Prajenan adalah satu dari empat pedukuhan utama Desa Baturan, berdiri di atas nilai ketekunan yang diwariskan lintas generasi.</p>
+                <p>Prajenan adalah satu dari tiga pedukuhan utama Desa Baturan, berdiri di atas nilai ketekunan yang diwariskan lintas generasi.</p>
             </div>
             <div class="sejarah-grid">
                 <div class="sejarah-copy">
                     <div class="sejarah-image-wrapper" style="margin-bottom: 24px; border-radius: var(--radius); overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.08); border: 1px solid var(--line);">
                         <img src="img/sejarah.jpg" alt="Hamparan sawah dan aliran irigasi Dukuh Prajenan" style="width:100%; height:auto; max-height:220px; object-fit:cover; display:block;">
                         <div style="padding:8px 18px; background:var(--paper-deep); font-size:0.7rem; color:var(--ink-soft); text-align:justify; font-style:italic; letter-spacing:0.02em; border-top:1px solid var(--line);">
-                            <p>Dukuh Prajenan merupakan salah satu dari empat pedukuhan utama di Desa Baturan, Kecamatan Gantiwarno, Kabupaten Klaten, bersama dengan Dukuh Baturan, Dukuh Cetok, dan Dukuh Tegal Janti. Berdasarkan sejarah umum yang tercatat di Sejarah Desa Baturan, wilayah ini berdiri di atas landasan nilai-nilai ketekunan yang bersumber dari tiga untaian kisah leluhur.</p>
-                            <p>Kisah tersebut bermula dari berkumpulnya para bekel (orang kepercayaan pejabat Kasunanan Surakarta) di wilayah ini, berlanjut pada riwayat para batur, abdi kerajaan yang mengabdi dengan tekun hingga meraih keberhasilan, dan disempurnakan oleh legenda sabda wali tentang sebuah sumber mata air jernih berbatu yang diyakini menjadi berkah bagi wilayah sekitarnya.</p>
+                            <p>Dukuh Prajenan merupakan salah satu dari tiga pedukuhan utama di Desa Baturan, Kecamatan Gantiwarno, Kabupaten Klaten, bersama dengan Dukuh Baturan dan Dukuh Cetok. Berdasarkan sejarah umum yang tercatat di Sejarah Desa Baturan, wilayah ini berdiri di atas landasan nilai-nilai ketekunan yang bersumber dari tiga untaian kisah leluhur.</p>
+                            <p>Kisah tersebut bermula dari berkumpulnya para bekel — orang kepercayaan pejabat Kasunanan Surakarta — di wilayah ini, berlanjut pada riwayat para batur, abdi kerajaan yang mengabdi dengan tekun hingga meraih keberhasilan, dan disempurnakan oleh legenda sabda wali tentang sebuah sumber mata air jernih berbatu yang diyakini menjadi berkah bagi wilayah sekitarnya.</p>
                             <p>Sebagai bagian integral dari kesatuan historis Desa Baturan, Dukuh Prajenan kini dipetakan sebagai wilayah potensial yang siap dikembangkan. Narasi sejarah ini dijadikan fondasi awal untuk mulai memperkenalkan, mendokumentasikan, dan menggerakkan peluang ekonomi kreatif serta rintisan UMKM lokal bagi kemandirian masyarakat di masa depan.</p>
                         </div>
                     </div>
@@ -725,10 +1467,13 @@
                     <div class="tl-item"><div class="yr mono">Untaian Pertama</div><h3>Para Bekel Kasunanan Surakarta</h3><p>Berkumpulnya orang-orang kepercayaan pejabat Kasunanan Surakarta di wilayah ini menjadi titik tolak sejarah kawasan.</p></div>
                     <div class="tl-item"><div class="yr mono">Untaian Kedua</div><h3>Kisah Para Batur</h3><p>Para abdi kerajaan (batur) yang mengabdi dengan tekun hingga sukses, menjadi sumber nilai ketekunan yang diwariskan.</p></div>
                     <div class="tl-item"><div class="yr mono">Untaian Ketiga</div><h3>Legenda Sabda Wali</h3><p>Legenda tentang sumber mata air jernih berbatu, diyakini sebagai berkah wali bagi wilayah Baturan dan sekitarnya.</p></div>
+                    <div class="tl-item"><div class="yr mono">Masa Kini</div><h3>Pemetaan Potensi &amp; UMKM</h3><p>Prajenan mulai didokumentasikan sebagai wilayah potensial untuk ekonomi kreatif dan rintisan UMKM lokal.</p></div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- ===== DIVIDER: Sejarah → Visi Misi ===== -->
+    <!-- ===== DIVIDER ===== -->
     <hr class="contour-paper-deep">
 
     <!-- ===== VISI MISI ===== -->
@@ -754,7 +1499,6 @@
                 </div>
                 <div class="card-misi">
                     <span class="mono" style="font-weight:500;color:var(--gabah);">Misi</span>
-                    <p>Misi yang merupakan penjabaran visi sebagai usaha dalam menunjang pencapaian visi sebagai berikut:</p>
                     <div class="misi-grid">
                         <div class="misi-item"><span class="num">01.</span><p>Meningkatkan ketaqwaan kepada Tuhan Yang Maha Esa</p></div>
                         <div class="misi-item"><span class="num">02.</span><p>Meningkatkan kinerja dan pelayanan prima kepada masyarakat</p></div>
@@ -772,7 +1516,7 @@
         </div>
     </section>
 
-    <!-- ===== DIVIDER: Visi Misi → Lokasi ===== -->
+    <!-- ===== DIVIDER ===== -->
     <hr class="contour-paper">
 
     <!-- ===== LOKASI ===== -->
@@ -842,7 +1586,7 @@
         </div>
     </section>
 
-    <!-- ===== DIVIDER: Lokasi → Potensi ===== -->
+    <!-- ===== DIVIDER ===== -->
     <hr class="contour-paper-deep">
 
     <!-- ===== POTENSI ===== -->
@@ -900,7 +1644,7 @@
         </div>
     </section>
 
-    <!-- ===== DIVIDER: Potensi → UMKM ===== -->
+    <!-- ===== DIVIDER ===== -->
     <hr class="contour-paper">
 
     <!-- ===== UMKM ===== -->
@@ -911,23 +1655,18 @@
                 <h2>UMKM &amp; Ekonomi Warga</h2>
                 <p>Prajenan mencatat <strong>29</strong> unit usaha mikro aktif dengan rata-rata modal lebih dari Rp8,6 juta dan rata-rata omset lebih dari Rp6,9 juta per tahun.</p>
             </div>
-
-            <!-- STATISTIK 3 KOLOM: JUMLAH, RATA MODAL, RATA OMSET -->
             <div class="stat-row-mini" id="statRowIndex"></div>
-
-            <!-- TOP 5 SEKTOR -->
             <div class="top5-box-mini">
                 <span class="mono" style="color:var(--soil);font-size:0.68rem;">🏆 Sektor Usaha Terbanyak</span>
                 <div class="top5-list-mini" id="topSektorIndex"></div>
             </div>
-
             <div style="text-align:center;margin-top:24px;">
                 <a href="umkm.html" class="btn-detail">Lihat Seluruh Data UMKM →</a>
             </div>
         </div>
     </section>
 
-    <!-- ===== DIVIDER: UMKM → Kegiatan ===== -->
+    <!-- ===== DIVIDER ===== -->
     <hr class="contour-paper-deep">
 
     <!-- ===== KEGIATAN ===== -->
@@ -949,27 +1688,91 @@
         </div>
     </section>
 
-    <!-- ===== DIVIDER: Kegiatan → Demografi ===== -->
+    <!-- ===== DIVIDER ===== -->
     <hr class="contour-paper">
 
-    <!-- ===== DEMOGRAFI ===== -->
-    <section id="demografi" class="bg-paper">
+    <!-- ===== DEMOGRAFI (di index) ===== -->
+    <section id="demografi-index" class="demo-section">
         <div class="wrap">
             <div class="section-head">
                 <span class="tag">Papan Statistik</span>
-                <h2>Demografi &amp; Kependudukan</h2>
-                <p>Gambaran umum kependudukan Dukuh Prajenan dan data monografi Desa Baturan.</p>
+                <h2>Demografi &amp; Kependudukan Desa Baturan</h2>
+                <p>Data kependudukan dan monografi Desa Baturan secara lengkap.</p>
             </div>
-            <div style="background:rgba(0,0,0,0.04);border:1px solid var(--line);padding:24px 28px;border-radius:var(--radius);margin-bottom:24px;">
-                <span class="mono" style="color:var(--soil);font-size:0.68rem;">Data Monografi Desa Baturan (skala desa)</span>
-                <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:16px;">
-                    <div><span style="color:var(--ink-soft);font-size:0.7rem;">Total Penduduk</span><br><span style="font-family:'Fraunces',serif;font-weight:650;font-size:1.6rem;color:var(--padi-deep);">1.939</span></div>
-                    <div><span style="color:var(--ink-soft);font-size:0.7rem;">Kepala Keluarga</span><br><span style="font-family:'Fraunces',serif;font-weight:650;font-size:1.6rem;color:var(--padi-deep);">711</span></div>
-                    <div><span style="color:var(--ink-soft);font-size:0.7rem;">Laki / Perempuan</span><br><span style="font-family:'Fraunces',serif;font-weight:650;font-size:1.6rem;color:var(--padi-deep);">967 / 972</span></div>
+
+            <!-- Grafik perbandingan KK -->
+            <div class="comparison-grid">
+                <div class="foto-wrapper">
+                    <img src="img/dukuh.jpg" alt="Kegiatan masyarakat Desa Baturan" loading="lazy">
+                </div>
+                <div class="chart-box-dark">
+                    <span class="mono" style="color:var(--soil);">Perbandingan Jumlah KK</span>
+                    <div id="comparisonChartIndex" class="bar-chart-compare"></div>
+                    <div class="chart-legend">
+                        <span><span class="dot dot-desa"></span> Desa Baturan</span>
+                        <span><span class="dot dot-prajenan"></span> Dukuh Prajenan</span>
+                    </div>
+                    <div style="text-align:center; margin-top:10px;">
+                        <span class="chart-note">Sumber: Monografi Desa Baturan Desember 2025 &amp; estimasi RT 05–06 Prajenan</span>
+                    </div>
                 </div>
             </div>
+
+            <!-- STAT 4 KOLOM -->
+            <div id="totalPendudukIndex" class="stat-grid-4"></div>
+
+            <!-- FILTER & TABEL (sama seperti demografi) -->
+            <div class="filter-wrap" style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:24px;">
+                <button class="filter-btn active" data-target="semua">Semua</button>
+                <button class="filter-btn" data-target="agama">Agama</button>
+                <button class="filter-btn" data-target="pendidikan">Pendidikan</button>
+                <button class="filter-btn" data-target="usia">Usia</button>
+                <button class="filter-btn" data-target="pencaharian">Pencaharian</button>
+                <button class="filter-btn" data-target="mobilitas">Mobilitas</button>
+            </div>
+
+            <div id="tableContainerIndex">
+                <div class="table-section" data-category="agama">
+                    <div class="demo-table-box">
+                        <span class="mono">Penduduk Menurut Agama / Kepercayaan</span>
+                        <table class="jadwal-table" id="tabelAgamaIndex"><tbody></tbody></table>
+                    </div>
+                </div>
+                <div class="table-section" data-category="pendidikan">
+                    <div class="demo-table-box">
+                        <span class="mono">Penduduk Menurut Tingkat Pendidikan</span>
+                        <table class="jadwal-table" id="tabelPendidikanIndex"><tbody></tbody></table>
+                    </div>
+                </div>
+                <div class="table-section" data-category="usia">
+                    <div class="demo-table-box">
+                        <span class="mono">Penduduk Menurut Kelompok Usia</span>
+                        <table class="jadwal-table" id="tabelUsiaIndex"><tbody></tbody></table>
+                    </div>
+                </div>
+                <div class="table-section" data-category="pencaharian">
+                    <div class="demo-table-box">
+                        <span class="mono">Penduduk Menurut Mata Pencaharian</span>
+                        <table class="jadwal-table" id="tabelPencaharianIndex"><tbody></tbody></table>
+                        <p class="mono" style="font-size:0.62rem;color:var(--ink-soft);margin-top:10px;">Total = 1.939 orang, sesuai total penduduk desa.</p>
+                    </div>
+                </div>
+                <div class="table-section" data-category="mobilitas">
+                    <div class="demo-table-box">
+                        <span class="mono">Mobilitas / Mutasi Penduduk Tahun 2025</span>
+                        <table class="jadwal-table" id="tabelMobilitasIndex"><tbody></tbody></table>
+                        <p class="mono" style="font-size:0.62rem;color:var(--ink-soft);margin-top:10px;">Rincian Laki/Perempuan untuk Datang &amp; Pindah tidak tersedia.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="note">
+                <span class="mono" style="color:var(--soil);font-size:0.7rem;">📌 Sumber Data</span>
+                <p style="margin-top:8px;">Buku Data Monografi Desa / Kelurahan Baturan, Kec. Gantiwarno, Kab. Klaten, Provinsi Jawa Tengah — Semester II, Keadaan Data Bulan Desember 2025. Ditandatangani Kepala Desa Baturan (Slamet Sutrisno) dan Kasi Pemerintahan (Suripno), Baturan, 31 Desember 2025.</p>
+            </div>
+
             <div style="text-align:center;">
-                <a href="demografi.html" class="btn-detail-light">Lihat Seluruh Data Demografi →</a>
+                <a href="demografi.html" class="btn-detail" style="background:var(--padi-deep); color:#FBF7E9;">Lihat Data Demografi Lengkap →</a>
             </div>
         </div>
     </section>
@@ -990,7 +1793,7 @@
                         <li><a href="#potensi">Potensi Desa</a></li>
                         <li><a href="#umkm">UMKM</a></li>
                         <li><a href="#kegiatan">Kegiatan Masyarakat</a></li>
-                        <li><a href="demografi.html">Demografi Detail</a></li>
+                        <li><a href="#demografi-index">Demografi</a></li>
                         <li><a href="kkn.html">Laporan KKN</a></li>
                     </ul>
                 </div>
@@ -1018,16 +1821,17 @@
 
     <!-- ===== JAVASCRIPT ===== -->
     <script src="data-umkm.js"></script>
+    <script src="data-demografi.js"></script>
     <script>
         // ============================================================
         // DATA KEGIATAN
         // ============================================================
         const kegiatanData = [
-            { id: 1, title: "Kerja Bakti Lingkungan", desc: "Gotong royong membersihkan saluran irigasi, jalan dukuh, dan fasilitas umum secara bersama-sama dalam 1 RW.", category: "sosial", schedule: "Rutin", tag: "Sosial", tagClass: "tag-oranye", image: "img/kerjaBakti.jpg", photoAlt: "Kerja bakti membersihkan lingkungan" },
-            { id: 2, title: "Posyandu", desc: "Program kesehatan rutin tiap bulan dengan berbagai kegiatan seperti posyandu balita, kelas ibu hamil, posyandu jiwa, posyandu lansia.", category: "kesehatan", schedule: "Tiap Bulan", tag: "Kesehatan", tagClass: "tag-biru", image: "img/posyandu.jpg", photoAlt: "Kegiatan posyandu balita dan jiwa" },
-            { id: 3, title: "TPA (Taman Pendidikan Al-Qur'an)", desc: "Pendidikan mengaji untuk anak-anak dukuh Prajenan, dilaksanakan tiga kali sepekan.", category: "keagamaan", schedule: "Rabu · Sabtu · Minggu", tag: "Keagamaan", tagClass: "tag-hijau", image: "img/tpa.jpg", photoAlt: "Anak-anak mengaji di TPA" },
-            { id: 5, title: "Karawitan", desc: "Latihan rutin kesenian karawitan kaum muda hingga lansia di sanggar Karawitan.", category: "seni", schedule: "Tiap Sabtu", tag: "Seni", tagClass: "tag-oranye", image: "img/karawitan.jpg", photoAlt: "Latihan karawitan" },
-            { id: 6, title: "PKK dan Arisan Ibu-Ibu", desc: "Arisan RT 05, RT 06, dan RW 03 dengan berbagai kegiatan seperti sosialisasi simpan pinjam.", category: "sosial", schedule: "Rutin", tag: "Sosial", tagClass: "tag-oranye", image: "img/pkk.jpg", photoAlt: "Kegiatan PKK dan arisan ibu-ibu" },
+            { id: 1, title: "Kerja Bakti Lingkungan", desc: "Gotong royong membersihkan saluran irigasi, jalan dukuh, dan fasilitas umum secara bergiliran per RT.", category: "sosial", schedule: "Rutin", tag: "Sosial", tagClass: "tag-oranye", image: "img/kerjaBakti.jpg", photoAlt: "Kerja bakti membersihkan lingkungan" },
+            { id: 2, title: "Posyandu Balita & Jiwa", desc: "Sejak tahun ini dipusatkan di gedung posyandu. Prajenan merupakan Pos 2 dari 5 pos posyandu se-Desa Baturan.", category: "kesehatan", schedule: "Sebulan Sekali, Sabtu", tag: "Kesehatan", tagClass: "tag-biru", image: "img/posyandu.jpg", photoAlt: "Kegiatan posyandu balita dan jiwa" },
+            { id: 3, title: "TPA (Taman Pendidikan Al-Qur'an)", desc: "Pendidikan mengaji untuk anak-anak dukuh, dilaksanakan tiga kali sepekan.", category: "keagamaan", schedule: "Rabu · Sabtu · Minggu", tag: "Keagamaan", tagClass: "tag-hijau", image: "img/tpa.jpg", photoAlt: "Anak-anak mengaji di TPA" },
+            { id: 5, title: "Karawitan", desc: "Latihan kesenian karawitan rutin di rumah Pak Lurah, arah selatan dari perempatan kedua, sisi kiri jalan.", category: "seni", schedule: "Tiap Sabtu", tag: "Seni", tagClass: "tag-oranye", image: "img/karawitan.jpg", photoAlt: "Latihan karawitan" },
+            { id: 6, title: "PKK dan Arisan Ibu-Ibu", desc: "Arisan simpan pinjam dan senam rutin ibu-ibu; Kelompok Wanita Tani (KWT) yang pernah berjalan saat ini vakum.", category: "sosial", schedule: "Rutin", tag: "Sosial", tagClass: "tag-oranye", image: "img/pkk.jpg", photoAlt: "Kegiatan PKK dan arisan ibu-ibu" },
             { id: 7, title: "Senam Ibu-Ibu", desc: "Senam pagi rutin yang diadakan bersama arisan ibu-ibu sebagai sarana menjaga kesehatan dan kebersamaan.", category: "kesehatan", schedule: "Rutin Pagi", tag: "Kesehatan", tagClass: "tag-biru", image: "img/senam.jpeg", photoAlt: "Senam pagi ibu-ibu" },
             { id: 8, title: "Karang Taruna Pemuda", desc: "Wadah bagi pemuda dukuh untuk berorganisasi, mengadakan kegiatan sosial, olahraga, dan pengembangan diri.", category: "sosial", schedule: "Rutin", tag: "Sosial", tagClass: "tag-oranye", image: "img/karangTaruna.jpg", photoAlt: "Kegiatan karang taruna pemuda" }
         ];
@@ -1073,17 +1877,15 @@
         });
 
         // ============================================================
-        // RENDER STATISTIK UMKM INDEX (3 KOLOM: JUMLAH, RATA MODAL, RATA OMSET)
+        // RENDER UMKM INDEX
         // ============================================================
         function renderIndexStatistik() {
-            const totalUmkm = umkmData.length; // 29
-            const totalModal = umkmData.reduce((sum, d) => sum + d.modal, 0);
-            const totalOmset = umkmData.reduce((sum, d) => sum + d.omset, 0);
-
+            const totalUmkm = umkmData.length;
+            const totalModal = umkmData.reduce((s, d) => s + d.modal, 0);
+            const totalOmset = umkmData.reduce((s, d) => s + d.omset, 0);
             const rataModal = totalModal / totalUmkm;
             const rataOmset = totalOmset / totalUmkm;
-
-            const fmt = (num) => 'Rp' + num.toLocaleString('id-ID').replace(/,/g, '.');
+            const fmt = (n) => 'Rp' + n.toLocaleString('id-ID').replace(/,/g, '.');
             const row = document.getElementById('statRowIndex');
             if (row) {
                 row.innerHTML = `
@@ -1094,14 +1896,9 @@
             }
         }
 
-        // ============================================================
-        // RENDER TOP 5 SEKTOR INDEX
-        // ============================================================
         function renderIndexTopSektor() {
             const sektorCount = {};
-            umkmData.forEach(d => {
-                sektorCount[d.sektor] = (sektorCount[d.sektor] || 0) + 1;
-            });
+            umkmData.forEach(d => { sektorCount[d.sektor] = (sektorCount[d.sektor] || 0) + 1; });
             const sorted = Object.entries(sektorCount).sort((a, b) => b[1] - a[1]).slice(0, 5);
             const container = document.getElementById('topSektorIndex');
             if (container) {
@@ -1115,11 +1912,84 @@
             }
         }
 
-        // ============================================================
-        // INISIALISASI INDEX
-        // ============================================================
         renderIndexStatistik();
         renderIndexTopSektor();
+
+        // ============================================================
+        // DEMOGRAFI INDEX
+        // ============================================================
+        document.addEventListener('DOMContentLoaded', function() {
+            const d = demografiData;
+
+            // Grafik perbandingan KK
+            const chartContainer = document.getElementById('comparisonChartIndex');
+            if (chartContainer) {
+                const kkDesa = d.penduduk.kepalaKeluarga.total;
+                const kkPrajenan = Object.values(d.prajenan.kkPerRt).reduce((a, b) => a + b, 0);
+                const maxVal = Math.max(kkDesa, kkPrajenan) * 1.15;
+                const hDesa = Math.max(Math.round((kkDesa / maxVal) * 100), 30);
+                const hPrajenan = Math.max(Math.round((kkPrajenan / maxVal) * 100), 30);
+                chartContainer.innerHTML = `
+                    <div class="bar-item-compare">
+                        <div class="bar b-desa" style="height:${hDesa}%;"><span class="label-count">${kkDesa}</span></div>
+                        <div class="bar-label"><span class="sub">Seluruh Desa</span></div>
+                    </div>
+                    <div class="bar-item-compare">
+                        <div class="bar b-prajenan" style="height:${hPrajenan}%;"><span class="label-count">${kkPrajenan}</span></div>
+                        <div class="bar-label"><span class="sub">RW 03 • RT 05 &amp; 06</span></div>
+                    </div>
+                `;
+            }
+
+            // STAT 4 KOLOM
+            const totalPenduduk = document.getElementById('totalPendudukIndex');
+            if (totalPenduduk) {
+                const p = d.penduduk;
+                totalPenduduk.innerHTML = `
+                    <div class="stat-card"><div class="icon-big"><i class="fas fa-users"></i></div><div class="angka">${p.total.toLocaleString()}</div><div class="label">Total Penduduk</div></div>
+                    <div class="stat-card"><div class="icon-big"><i class="fas fa-people-arrows"></i></div><div class="angka">${p.kepalaKeluarga.total}</div><div class="label">Kepala Keluarga</div></div>
+                    <div class="stat-card"><div class="icon-big"><i class="fas fa-mars"></i></div><div class="angka">${p.lakiLaki}</div><div class="label">Laki-laki</div></div>
+                    <div class="stat-card"><div class="icon-big"><i class="fas fa-venus"></i></div><div class="angka">${p.perempuan}</div><div class="label">Perempuan</div></div>
+                `;
+            }
+
+            // TABEL
+            const tAgama = document.querySelector('#tabelAgamaIndex tbody');
+            if (tAgama) tAgama.innerHTML = d.agama.map(i => `<tr><td>${i.nama}</td><td>${i.jumlah.toLocaleString()} Orang</td></tr>`).join('');
+
+            const tPend = document.querySelector('#tabelPendidikanIndex tbody');
+            if (tPend) tPend.innerHTML = d.pendidikan.map(i => `<tr><td>${i.tingkat}</td><td>${i.jumlah.toLocaleString()} Orang</td></tr>`).join('');
+
+            const tUsia = document.querySelector('#tabelUsiaIndex tbody');
+            if (tUsia) tUsia.innerHTML = d.usia.map(i => `<tr><td>${i.range}</td><td>${i.jumlah.toLocaleString()} Orang</td></tr>`).join('');
+
+            const tPenc = document.querySelector('#tabelPencaharianIndex tbody');
+            if (tPenc) tPenc.innerHTML = d.mataPencaharian.map(i => `<tr><td>${i.pekerjaan}</td><td>${i.jumlah.toLocaleString()} Orang</td></tr>`).join('');
+
+            const tMob = document.querySelector('#tabelMobilitasIndex tbody');
+            if (tMob) {
+                const m = d.mobilitas;
+                tMob.innerHTML = `
+                    <tr><td>Lahir</td><td>${m.lahir.total} Orang (L: ${m.lahir.lakiLaki}, P: ${m.lahir.perempuan})</td></tr>
+                    <tr><td>Meninggal</td><td>${m.meninggal.total} Orang (L: ${m.meninggal.lakiLaki}, P: ${m.meninggal.perempuan})</td></tr>
+                    <tr><td>Datang</td><td>${m.datang.total} Orang</td></tr>
+                    <tr><td>Pindah</td><td>${m.pindah.total} Orang</td></tr>
+                `;
+            }
+
+            // FILTER (sama seperti demografi)
+            const buttons = document.querySelectorAll('#demografi-index .filter-btn');
+            const sections = document.querySelectorAll('#tableContainerIndex .table-section');
+            function filterTable(cat) {
+                sections.forEach(sec => sec.classList.add('hidden'));
+                if (cat === 'semua') sections.forEach(sec => sec.classList.remove('hidden'));
+                else sections.forEach(sec => { if (sec.dataset.category === cat) sec.classList.remove('hidden'); });
+                buttons.forEach(b => b.classList.remove('active'));
+                document.querySelector(`#demografi-index .filter-btn[data-target="${cat}"]`).classList.add('active');
+            }
+            buttons.forEach(btn => btn.addEventListener('click', function() { filterTable(this.dataset.target); }));
+            filterTable('semua');
+        });
 
         // ============================================================
         // LIGHTBOX
@@ -1145,7 +2015,7 @@
         const io = new IntersectionObserver((entries) => {
             entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
         }, { threshold: 0, rootMargin: '0px 0px -10% 0px' });
-        document.querySelectorAll('section').forEach(s => {
+        document.querySelectorAll('section, .demo-section').forEach(s => {
             s.classList.add('fade-in');
             io.observe(s);
         });
